@@ -25,7 +25,7 @@ public class EmployeeServiceImpl implements EmployeeService{
         List<Employee> allEmployees = employeeRepository.getAllEmployees();
 
         if (allEmployees.isEmpty()) {
-            return null;
+            throw new IllegalArgumentException ("Данные не найдены");
         }
 
         Employee employeeWithMinSalary = allEmployees.get(0);
@@ -44,7 +44,7 @@ public class EmployeeServiceImpl implements EmployeeService{
         List<Employee> allEmployees = employeeRepository.getAllEmployees();
 
         if (allEmployees.isEmpty()) {
-            return null;
+            throw new IllegalArgumentException ("Данные не найдены");
         }
 
         Employee employeeWithMaxSalary = allEmployees.get(0);

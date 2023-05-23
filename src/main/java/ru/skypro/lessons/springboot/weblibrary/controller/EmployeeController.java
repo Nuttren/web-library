@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-//@RequestMapping("/employee")
+@RequestMapping
 public class EmployeeController {
 
     private final EmployeeService employeeService;
@@ -29,7 +29,7 @@ public class EmployeeController {
         List<Employee> allEmployees = employeeService.getAllEmployees();
 
         if (allEmployees.isEmpty()) {
-            return null;
+            throw new IllegalArgumentException ("Данные не найдены");
         }
 
         Employee employeeWithMinSalary = allEmployees.get(0);
@@ -46,7 +46,7 @@ public class EmployeeController {
         List<Employee> allEmployees = employeeService.getAllEmployees();
 
         if (allEmployees.isEmpty()) {
-            return null;
+            throw new IllegalArgumentException ("Данные не найдены");
         }
 
         Employee employeeWithMaxSalary = allEmployees.get(0);
