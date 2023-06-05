@@ -15,7 +15,7 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
         private long id;
 
-    @Basic
+
     @Column(name = "position_id", insertable=false, updatable=false)
     private Integer positionId;
 
@@ -44,9 +44,10 @@ public class Employee {
         this.id = id;
     }
 
-    public Employee(String name, int salary) {
+    public Employee(String name, int salary, Integer positionId) {
             this.name = name;
             this.salary = salary;
+            this.positionId = positionId;
         }
         public long getId() {return id;}
         public String getName() {

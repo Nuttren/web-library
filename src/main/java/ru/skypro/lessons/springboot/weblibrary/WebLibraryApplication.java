@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-
+@EnableJpaRepositories("ru.skypro.lessons.springboot.weblibrary.repository")
 public class WebLibraryApplication {
 
     public static void main(String[] args) {

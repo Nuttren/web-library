@@ -5,7 +5,7 @@ public class EmployeeFullInfoDTO {
         private double salary;
         private String positionName;
 
-        public EmployeeFullInfoDTO(String name, double salary, String position) {
+        public EmployeeFullInfoDTO(String name, double salary, String positionName) {
             this.name = name;
             this.salary = salary;
             this.positionName = positionName;
