@@ -1,4 +1,4 @@
-package dto;
+package ru.skypro.lessons.springboot.weblibrary.dto;
 
 public class EmployeeFullInfoDTO {
         private String name;

@@ -1,14 +1,13 @@
 package ru.skypro.lessons.springboot.weblibrary.service;
 
 
-import dto.EmployeeDTO;
-import dto.EmployeeFullInfoDTO;
-import exeption.IncorrectEmployeeIdException;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import ru.skypro.lessons.springboot.weblibrary.dto.EmployeeDTO;
+import ru.skypro.lessons.springboot.weblibrary.dto.EmployeeFullInfoDTO;
+import ru.skypro.lessons.springboot.weblibrary.exeption.IncorrectEmployeeIdException;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
-import pojo.Employee;
-import pojo.Position;
+import ru.skypro.lessons.springboot.weblibrary.pojo.Employee;
+import ru.skypro.lessons.springboot.weblibrary.pojo.Position;
 import ru.skypro.lessons.springboot.weblibrary.repository.EmployeeRepository;
 
 import java.awt.print.Pageable;

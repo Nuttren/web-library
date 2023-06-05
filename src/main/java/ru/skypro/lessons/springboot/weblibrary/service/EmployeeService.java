@@ -1,10 +1,9 @@
 package ru.skypro.lessons.springboot.weblibrary.service;
 
-import dto.EmployeeDTO;
-import dto.EmployeeFullInfoDTO;
+import ru.skypro.lessons.springboot.weblibrary.dto.EmployeeDTO;
+import ru.skypro.lessons.springboot.weblibrary.dto.EmployeeFullInfoDTO;
 import org.springframework.data.domain.Page;
-import org.springframework.stereotype.Component;
-import pojo.Employee;
+import ru.skypro.lessons.springboot.weblibrary.pojo.Employee;
 
 import java.awt.print.Pageable;
 import java.util.List;

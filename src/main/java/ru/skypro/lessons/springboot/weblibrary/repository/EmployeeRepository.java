@@ -1,11 +1,7 @@
 package ru.skypro.lessons.springboot.weblibrary.repository;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
-import pojo.Employee;
+import ru.skypro.lessons.springboot.weblibrary.pojo.Employee;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package ru.skypro.lessons.springboot.weblibrary.controller;
 
-import dto.EmployeeDTO;
-import dto.EmployeeFullInfoDTO;
+import ru.skypro.lessons.springboot.weblibrary.dto.EmployeeDTO;
+import ru.skypro.lessons.springboot.weblibrary.dto.EmployeeFullInfoDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -9,12 +9,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-import pojo.Employee;
+import ru.skypro.lessons.springboot.weblibrary.pojo.Employee;
 import ru.skypro.lessons.springboot.weblibrary.service.EmployeeService;
 
 import java.awt.print.Pageable;
-import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 

@@ -1,6 +1,6 @@
-package dto;
+package ru.skypro.lessons.springboot.weblibrary.dto;
 
-import pojo.Employee;
+import ru.skypro.lessons.springboot.weblibrary.pojo.Employee;
 
 public class EmployeeDTO {
     // Поля для хранения идентификатора, имени и зарплаты сотрудника
