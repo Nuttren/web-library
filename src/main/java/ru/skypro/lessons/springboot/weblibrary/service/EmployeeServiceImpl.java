@@ -10,6 +10,7 @@ import ru.skypro.lessons.springboot.weblibrary.pojo.Employee;
 import ru.skypro.lessons.springboot.weblibrary.pojo.Position;
 import ru.skypro.lessons.springboot.weblibrary.repository.EmployeeRepository;
 
+import javax.transaction.Transactional;
 import java.awt.print.Pageable;
 import java.util.Comparator;
 import java.util.List;
@@ -26,22 +27,25 @@ public class EmployeeServiceImpl implements EmployeeService{
     }
 
     @Override
+    @Transactional
     public void createEmployee(EmployeeDTO employeeDTO) {
-        Employee employee = new Employee();
-        employee.setName(employeeDTO.getName());
-        employee.setSalary(employeeDTO.getSalary());
-
+        Employee employee = employeeDTO.toEmployee();
         employeeRepository.save(employee);
     }
 
     @Override
+    @Transactional
     public void updateEmployee(long id, EmployeeDTO employeeDTO) {
-        Optional<Employee> existingEmployee = employeeRepository.findById(id);
-        if (existingEmployee.isPresent()) {
-            Employee employee = existingEmployee.get();
-            employee.setName(employeeDTO.getName());
-            employee.setSalary(employeeDTO.getSalary());
-        }
+
+        Employee employee = employeeRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Employee not found with id: " + id));
+
+
+        employee.setName(employeeDTO.getName());
+        employee.setSalary(employeeDTO.getSalary());
+
+
+        employeeRepository.save(employee);
     }
 
 
