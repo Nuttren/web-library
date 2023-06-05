@@ -1,5 +1,6 @@
 package ru.skypro.lessons.springboot.weblibrary.service;
 
+import dto.EmployeeDTO;
 import org.springframework.stereotype.Component;
 import pojo.Employee;
 
@@ -7,24 +8,25 @@ import java.util.List;
 
 
 public interface EmployeeService {
-    List<Employee> getAllEmployees();
+    List<EmployeeDTO> getAllEmployees();
+//
+//    Employee findEmployeeWithMinSalary();
+//
+//    Employee findEmployeeWithMaxSalary();
+//
+//    double getTotalSalary();
 
-    Employee findEmployeeWithMinSalary();
+//    List<Employee> getEmployeesWithSalaryAboveAverage();
 
-    Employee findEmployeeWithMaxSalary();
-
-    double getTotalSalary();
-
-    List<Employee> getEmployeesWithSalaryAboveAverage();
-
-    Employee getEmployeeById(int id);
+    Employee getEmployeeById(Integer id);
 
     void createEmployee (Employee employee);
 
-    void updateEmployee(int id, Employee employee);
+//    void updateEmployee(int id, Employee employee);
 
-    void removeEmployee(int id);
+    void removeEmployee(Integer id);
 
-    List<Employee> getEmployeesWithHigherSalary(int salary);
+//    List<Employee> getEmployeesWithHigherSalary(int salary);
 
+    Employee getEmployeeByName(String name);
 }

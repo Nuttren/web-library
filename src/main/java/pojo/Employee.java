@@ -1,10 +1,23 @@
 package pojo;
 
-public class Employee {
-        private String name;
-        private int salary;
+import javax.persistence.*;
 
-        private int id;
+@Entity
+@Table(name = "employee")
+public class Employee {
+    @Column (name = "name")
+        private String name;
+
+    @Column (name = "salary")
+        private int salary;
+    @Id
+    @Column (name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private Integer id;
+
+    public Employee() {
+
+    }
 
 
     public void setName(String name) {
@@ -15,12 +28,11 @@ public class Employee {
         this.salary = salary;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public Employee(int id, String name, int salary) {
-            this.id = id;
+    public Employee(String name, int salary) {
             this.name = name;
             this.salary = salary;
         }

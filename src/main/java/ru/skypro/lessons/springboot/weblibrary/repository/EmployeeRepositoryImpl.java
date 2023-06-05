@@ -1,42 +1,110 @@
 package ru.skypro.lessons.springboot.weblibrary.repository;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import pojo.Employee;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceUnit;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Repository
 public class EmployeeRepositoryImpl implements EmployeeRepository {
 
-    private List<Employee> employeeList = new ArrayList<>(List.of(
-            new Employee(0, "Катя", 180_000),
-            new Employee(1, "Дима", 102_000),
-            new Employee(2, "Олег", 80_000),
-            new Employee(3, "Вика", 165_000)));
+    private List<Employee> employeeList = new ArrayList<> ();
+
+//    @Override
+//    public List<Employee> getAllEmployees() {
+//        return employeeList;
+//    }
+//
+//    @Override
+//    public void createEmployee(Employee employee) {
+//        employeeList.add(employee);
+//    }
+//
+//    @Override
+//    public void removeEmployee(int id) {
+//    employeeList.remove(id);
+//    }
+//
+//    @Override
+//    public List<Employee> getEmployeesWithHigherSalary(int salary) {
+//        return employeeList.stream()
+//                .filter(employee -> employee.getSalary() > salary)
+//                .collect(Collectors.toUnmodifiableList());
+//    }
+
 
     @Override
-    public List<Employee> getAllEmployees() {
-        return employeeList;
+    public <S extends Employee> S save(S entity) {
+        return null;
     }
 
     @Override
-    public void createEmployee(Employee employee) {
-        employeeList.add(employee);
+    public <S extends Employee> Iterable<S> saveAll(Iterable<S> entities) {
+        return null;
     }
 
     @Override
-    public void removeEmployee(int id) {
-    employeeList.remove(id);
+    public Optional<Employee> findById(Integer integer) {
+        return Optional.empty();
     }
 
-    public List<Employee> getEmployeesWithHigherSalary(int salary) {
-        return employeeList.stream()
-                .filter(employee -> employee.getSalary() > salary)
-                .collect(Collectors.toUnmodifiableList());
+    @Override
+    public boolean existsById(Integer integer) {
+        return false;
     }
 
+    @Override
+    public Iterable<Employee> findAll() {
+        return null;
+    }
+
+    @Override
+    public Iterable<Employee> findAllById(Iterable<Integer> integers) {
+        return null;
+    }
+
+    @Override
+    public long count() {
+        return 0;
+    }
+
+    @Override
+    public void deleteById(Integer integer) {
+
+    }
+
+    @Override
+    public void delete(Employee entity) {
+
+    }
+
+    @Override
+    public void deleteAllById(Iterable<? extends Integer> integers) {
+
+    }
+
+    @Override
+    public void deleteAll(Iterable<? extends Employee> entities) {
+
+    }
+
+    @Override
+    public void deleteAll() {
+
+    }
+
+
+    @Override
+    public List<Employee> findByName(String name) {
+        return null;
+    }
 }
 
 
