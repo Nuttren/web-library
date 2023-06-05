@@ -6,13 +6,14 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Repository;
 import ru.skypro.lessons.springboot.weblibrary.pojo.Employee;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @Repository
+@Transactional
 public class EmployeeRepositoryImpl implements EmployeeRepository {
-
 
 
     private List<Employee> employeeList = new ArrayList<>();

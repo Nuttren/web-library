@@ -19,7 +19,9 @@ public class Employee {
     @Column(name = "position_id", insertable=false, updatable=false)
     private Integer positionId;
 
-    @ManyToOne
+
+
+    @ManyToOne (cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn (name = "position_id", insertable=false, updatable=false)
     private Position position;
 
@@ -31,7 +33,13 @@ public class Employee {
 
     }
 
+    public Integer getPositionId() {
+        return positionId;
+    }
 
+    public void setPositionId(Integer positionId) {
+        this.positionId = positionId;
+    }
     public void setName(String name) {
         this.name = name;
     }

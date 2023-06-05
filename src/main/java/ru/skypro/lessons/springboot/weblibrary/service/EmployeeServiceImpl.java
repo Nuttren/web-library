@@ -50,6 +50,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 
 
     @Override
+    @Transactional
     public List<EmployeeDTO> getAllEmployees() {
         // Получаем список сотрудников из репозитория,
         // Преобразуем их в DTO и собираем в список
@@ -93,7 +94,13 @@ public class EmployeeServiceImpl implements EmployeeService{
 
     @Override
     public List<EmployeeDTO> getEmployeesByPosition(String position) {
-        return employeeRepository.findByPosition(position).stream()
+        List<Employee> employees;
+        if (position != null && !position.isEmpty()) {
+            employees = employeeRepository.findByPosition(position);
+        } else {
+            employees = (List<Employee>) employeeRepository.findAll();
+        }
+        return employees.stream()
                 .map(EmployeeDTO::fromEmployee)
                 .collect(Collectors.toList());
     }

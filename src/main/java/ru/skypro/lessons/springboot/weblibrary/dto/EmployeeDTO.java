@@ -8,12 +8,17 @@ public class EmployeeDTO {
     private String name;
     private Integer salary;
 
+    private Integer positionId;
+
+
+
     // Метод для преобразования сущности Employee в объект EmployeeDTO
     public static EmployeeDTO fromEmployee (Employee employee) {
         EmployeeDTO employeeDTO = new EmployeeDTO();
         employeeDTO.setId(employee.getId());
         employeeDTO.setName(employee.getName());
         employeeDTO.setSalary(employee.getSalary());
+        employeeDTO.setPositionId(employee.getPosition().getPositionId());
         return employeeDTO;
     }
 
@@ -23,9 +28,21 @@ public class EmployeeDTO {
         employee.setId(this.getId());
         employee.setName(this.getName());
         employee.setSalary(this.getSalary());
+        employee.setPositionId(this.getPositionId());
         return employee;
     }
 
+    public void setSalary(Integer salary) {
+        this.salary = salary;
+    }
+
+    public Integer getPositionId() {
+        return positionId;
+    }
+
+    public void setPositionId(Integer positionId) {
+        this.positionId = positionId;
+    }
     // Геттер и сеттер для идентификатора сотрудника
     public long getId() {
         return id;

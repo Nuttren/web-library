@@ -158,12 +158,12 @@ public class EmployeeController {
     @GetMapping("/employees/position")
     public ResponseEntity<List<EmployeeDTO>> getEmployeesByPosition(@RequestParam(value = "position", required = false) String position) {
         List<EmployeeDTO> employees;
-        if (position != null && !position.isEmpty()) {
+        try {
             employees = employeeService.getEmployeesByPosition(position);
-        } else {
-            employees = employeeService.getAllEmployees();
+            return ResponseEntity.ok(employees);
+        } catch (Throwable t) {
+            return ResponseEntity.badRequest().body(null);
         }
-        return ResponseEntity.ok(employees);
     }
 
     @GetMapping("/employees/{id}/fullInfo")
