@@ -13,7 +13,19 @@ public class Employee {
     @Id
     @Column (name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private Integer id;
+        private long id;
+
+    @Basic
+    @Column(name = "position_id", insertable=false, updatable=false)
+    private Integer positionId;
+
+    @ManyToOne
+    @JoinColumn (name = "position_id", insertable=false, updatable=false)
+    private Position position;
+
+    public Position getPosition() {
+        return position;
+    }
 
     public Employee() {
 
@@ -28,7 +40,7 @@ public class Employee {
         this.salary = salary;
     }
 
-    public void setId(Integer id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -36,7 +48,7 @@ public class Employee {
             this.name = name;
             this.salary = salary;
         }
-        public int getId() {return id;}
+        public long getId() {return id;}
         public String getName() {
             return name;
         }

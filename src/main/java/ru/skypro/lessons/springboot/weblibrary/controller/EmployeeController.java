@@ -1,6 +1,10 @@
 package ru.skypro.lessons.springboot.weblibrary.controller;
 
+import dto.EmployeeDTO;
+import dto.EmployeeFullInfoDTO;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -8,8 +12,11 @@ import org.springframework.web.server.ResponseStatusException;
 import pojo.Employee;
 import ru.skypro.lessons.springboot.weblibrary.service.EmployeeService;
 
+import java.awt.print.Pageable;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping
@@ -18,11 +25,12 @@ public class EmployeeController {
 
     private final EmployeeService employeeService;
 
-//    @GetMapping("/employee")
-//    public List<Employee> getAllEmployees() {
-//        return employeeService.getAllEmployees();
-//    }
-//
+    @GetMapping("/employee")
+    public List<EmployeeDTO> getAllEmployees() {
+        return employeeService.getAllEmployees();
+    }
+
+    //
 //    @GetMapping("/employee/salary/min")
 //    public Employee findEmployeeWithMinSalary() {
 //        List<Employee> allEmployees = employeeService.getAllEmployees();
@@ -98,44 +106,87 @@ public class EmployeeController {
 //        return employeesAboveAverage;
 //    }
 //
-//    @GetMapping("employee/{id}")
-//    public Employee getEmployeeById(@PathVariable int id) {
-//        try {
-//            return employeeService.getAllEmployees().get(id);
-//        } catch (Throwable t) {
-//            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Employee not found with id: " + id);
-//        }
-//    }
-//
-//    @PostMapping("employee/create")
-//    public ResponseEntity<?> createEmployee(@RequestBody Employee employee) {
-//        try {
-//            employeeService.createEmployee(employee);
-//            return new ResponseEntity<>(HttpStatus.OK);
-//        } catch (Throwable t) {
-//            return ResponseEntity.badRequest().body("Error creating employee");
-//        }
-//    }
-//
-//    @PutMapping("employee/update/{id}")
-//    public ResponseEntity<?> updateEmployee(@PathVariable int id, @RequestBody Employee employee) {
-//        try {
-//            employeeService.updateEmployee(id, employee);
-//            return new ResponseEntity<>(HttpStatus.OK);
-//        } catch (Throwable t) {
-//            return ResponseEntity.badRequest().body("Error updating employee");
-//        }
-//    }
-//
-//    @DeleteMapping("employee/delete/{id}")
-//    public ResponseEntity<?> removeEmployee(@PathVariable int id) {
-//        try {
-//            employeeService.removeEmployee(id);
-//            return new ResponseEntity<>(HttpStatus.OK);
-//        } catch (Throwable t) {
-//            return ResponseEntity.badRequest().body("Error deleting employee");
-//        }
-//    }
+    @GetMapping("employee/{id}")
+    public EmployeeDTO getEmployeeById(@PathVariable long id) {
+        try {
+            return employeeService.getAllEmployees().get((int) id);
+        } catch (Throwable t) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Employee not found with id: " + id);
+        }
+    }
+
+    @PostMapping("employee/create")
+    public ResponseEntity<?> createEmployee(@RequestBody EmployeeDTO employeeDTO) {
+        try {
+            employeeService.createEmployee(employeeDTO);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (Throwable t) {
+            return ResponseEntity.badRequest().body("Error creating employee");
+        }
+    }
+
+    @PutMapping("employee/update/{id}")
+    public ResponseEntity<?> updateEmployee(@PathVariable long id, @RequestBody EmployeeDTO employeeDTO) {
+        try {
+            employeeService.updateEmployee(id, employeeDTO);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (Throwable t) {
+            return ResponseEntity.badRequest().body("Error updating employee: " + t.getMessage());
+        }
+    }
+
+    @DeleteMapping("employee/delete/{id}")
+    public ResponseEntity<?> removeEmployee(@PathVariable long id) {
+        try {
+            employeeService.removeEmployee(id);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (Throwable t) {
+            return ResponseEntity.badRequest().body("Error deleting employee");
+        }
+    }
+
+    @GetMapping("/employee/salary/max")
+    public ResponseEntity<?> findEmployeeWithMaxSalary() {
+        try {
+            employeeService.findEmployeeWithMaxSalary();
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (Throwable t) {
+            return ResponseEntity.badRequest().body("Employee does not exist");
+        }
+
+    }
+
+    @GetMapping("/employees/position")
+    public ResponseEntity<List<EmployeeDTO>> getEmployeesByPosition(@RequestParam(value = "position", required = false) String position) {
+        List<EmployeeDTO> employees;
+        if (position != null && !position.isEmpty()) {
+            employees = employeeService.getEmployeesByPosition(position);
+        } else {
+            employees = employeeService.getAllEmployees();
+        }
+        return ResponseEntity.ok(employees);
+    }
+
+    @GetMapping("/employees/{id}/fullInfo")
+    public ResponseEntity<EmployeeFullInfoDTO> getEmployeeFullInfo(@PathVariable long id) {
+        EmployeeFullInfoDTO employeeFullInfo = employeeService.getEmployeeFullInfo(id);
+        return ResponseEntity.ok(employeeFullInfo);
+    }
+
+    @GetMapping("/employees/page")
+    public ResponseEntity<List<EmployeeDTO>> getEmployeesByPage(@RequestParam(defaultValue = "0") int page) {
+        int pageSize = 10; // Лимит на количество сотрудников на странице
+        Pageable pageable = (Pageable) PageRequest.of(page, pageSize);
+        Page<Employee> employeePage = employeeService.getAllEmployees(pageable);
+        List<EmployeeDTO> employeeDTO = employeePage.getContent().stream()
+                .map(EmployeeDTO::fromEmployee)
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(employeeDTO);
+    }
+}
+
+
+
 //
 //    @GetMapping("/employees/salaryHigherThan")
 //    public ResponseEntity<List<Employee>> getEmployeesWithHigherSalary(@RequestParam("salary") int salary) {
@@ -147,14 +198,6 @@ public class EmployeeController {
 //        }
 //    }
 
-    @PostMapping("employee/create")
-    public ResponseEntity<?> createEmployee(@RequestBody Employee employee) {
-        try {
-            employeeService.createEmployee(employee);
-            return new ResponseEntity<>(HttpStatus.OK);
-        } catch (Throwable t) {
-            return ResponseEntity.badRequest().body("Error creating employee");
-        }
-    }
-}
+
+
 

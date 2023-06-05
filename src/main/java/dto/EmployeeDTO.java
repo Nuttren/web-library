@@ -4,7 +4,7 @@ import pojo.Employee;
 
 public class EmployeeDTO {
     // Поля для хранения идентификатора, имени и зарплаты сотрудника
-    private Integer id;
+    private long id;
     private String name;
     private Integer salary;
 
@@ -27,11 +27,11 @@ public class EmployeeDTO {
     }
 
     // Геттер и сеттер для идентификатора сотрудника
-    public Integer getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(long id) {
         this.id = id;
     }
 

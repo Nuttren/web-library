@@ -27,3 +27,15 @@ DELETE http://localhost:8080/employee/delete/{id}
 
 ###  Всу сотрудники, зарплата которых выше переданного параметра salary.
 GET http://localhost:8080/employee/salaryHigherThan
+
+### информация о сотрудниках с самой высокой зарплатой в фирме
+GET http://localhost:8080/employee/salaryHigherThan
+
+###
+GET http://localhost:8080/employees/position
+
+###
+GET http://localhost:8080/employees/{id}/fullInfo
+
+###
+GET http://localhost:8080/employees/page?page=

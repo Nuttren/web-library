@@ -1,6 +1,11 @@
 package ru.skypro.lessons.springboot.weblibrary.repository;
 
+import dto.EmployeeDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Repository;
 import pojo.Employee;
 
@@ -15,7 +20,9 @@ import java.util.stream.Collectors;
 @Repository
 public class EmployeeRepositoryImpl implements EmployeeRepository {
 
-    private List<Employee> employeeList = new ArrayList<> ();
+
+
+//    private List<Employee> employeeList = new ArrayList<> ();
 
 //    @Override
 //    public List<Employee> getAllEmployees() {
@@ -51,12 +58,12 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
     }
 
     @Override
-    public Optional<Employee> findById(Integer integer) {
+    public Optional<Employee> findById(Long id) {
         return Optional.empty();
     }
 
     @Override
-    public boolean existsById(Integer integer) {
+    public boolean existsById(Long aLong) {
         return false;
     }
 
@@ -66,7 +73,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
     }
 
     @Override
-    public Iterable<Employee> findAllById(Iterable<Integer> integers) {
+    public Iterable<Employee> findAllById(Iterable<Long> longs) {
         return null;
     }
 
@@ -76,7 +83,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
     }
 
     @Override
-    public void deleteById(Integer integer) {
+    public void deleteById(Long aLong) {
 
     }
 
@@ -86,7 +93,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
     }
 
     @Override
-    public void deleteAllById(Iterable<? extends Integer> integers) {
+    public void deleteAllById(Iterable<? extends Long> longs) {
 
     }
 
@@ -100,9 +107,24 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 
     }
 
-
     @Override
     public List<Employee> findByName(String name) {
+        return null;
+    }
+
+    @Override
+    public List<Employee> findByPosition(String position) {
+        return null;
+    }
+
+
+    @Override
+    public Iterable<Employee> findAll(Sort sort) {
+        return null;
+    }
+
+    @Override
+    public Page<Employee> findAll(Pageable pageable) {
         return null;
     }
 }
