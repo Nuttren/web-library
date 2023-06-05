@@ -8,6 +8,7 @@ import java.util.List;
 
 public interface EmployeeService {
     List<Employee> getAllEmployees();
+
     Employee findEmployeeWithMinSalary();
 
     Employee findEmployeeWithMaxSalary();
@@ -15,4 +16,15 @@ public interface EmployeeService {
     double getTotalSalary();
 
     List<Employee> getEmployeesWithSalaryAboveAverage();
+
+    Employee getEmployeeById(int id);
+
+    void createEmployee (Employee employee);
+
+    void updateEmployee(int id, Employee employee);
+
+    void removeEmployee(int id);
+
+    List<Employee> getEmployeesWithHigherSalary(int salary);
+
 }

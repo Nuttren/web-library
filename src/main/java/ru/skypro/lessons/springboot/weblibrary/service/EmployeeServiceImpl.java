@@ -96,4 +96,32 @@ public class EmployeeServiceImpl implements EmployeeService{
         return employeesAboveAverage;
     }
 
+    @Override
+    public Employee getEmployeeById(int id) {
+        return employeeRepository.getAllEmployees().get(id);
+    }
+
+    @Override
+    public void createEmployee(Employee employee) {
+        employeeRepository.createEmployee(employee);
+    }
+
+    @Override
+    public void updateEmployee(int id, Employee employee) {
+        Employee existingEmployee = employeeRepository.getAllEmployees().get(id);
+        if (existingEmployee != null) {
+            existingEmployee.setName(employee.getName());
+            existingEmployee.setSalary(employee.getSalary());
+        }
+    }
+
+    @Override
+    public void removeEmployee(int id) {
+        employeeRepository.removeEmployee(id);
+    }
+
+    @Override
+    public List<Employee> getEmployeesWithHigherSalary(int salary) {
+        return employeeRepository.getEmployeesWithHigherSalary(salary);
+    }
 }
