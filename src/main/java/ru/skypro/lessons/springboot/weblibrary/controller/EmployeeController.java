@@ -1,7 +1,5 @@
 package ru.skypro.lessons.springboot.weblibrary.controller;
 
-import ru.skypro.lessons.springboot.weblibrary.dto.EmployeeDTO;
-import ru.skypro.lessons.springboot.weblibrary.dto.EmployeeFullInfoDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -9,6 +7,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+import ru.skypro.lessons.springboot.weblibrary.dto.EmployeeDTO;
+import ru.skypro.lessons.springboot.weblibrary.dto.EmployeeFullInfoDTO;
+import ru.skypro.lessons.springboot.weblibrary.exeption.IncorrectEmployeeIdException;
 import ru.skypro.lessons.springboot.weblibrary.pojo.Employee;
 import ru.skypro.lessons.springboot.weblibrary.service.EmployeeService;
 
@@ -107,8 +108,8 @@ public class EmployeeController {
     @GetMapping("employee/{id}")
     public EmployeeDTO getEmployeeById(@PathVariable long id) {
         try {
-            return employeeService.getAllEmployees().get((int) id);
-        } catch (Throwable t) {
+            return employeeService.getEmployeeById(id);
+        } catch (IncorrectEmployeeIdException e) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Employee not found with id: " + id);
         }
     }

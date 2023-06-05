@@ -7,7 +7,7 @@ import java.util.List;
 
 
 public interface EmployeeRepository extends PagingAndSortingRepository<Employee, Long> {
-//    public List<Employee> findAllEmployees();
+    public List<Employee> findAllEmployees();
 //
 //    void createEmployee (Employee employee);
 //

@@ -1,11 +1,11 @@
 package ru.skypro.lessons.springboot.weblibrary.service;
 
 
+import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Service;
 import ru.skypro.lessons.springboot.weblibrary.dto.EmployeeDTO;
 import ru.skypro.lessons.springboot.weblibrary.dto.EmployeeFullInfoDTO;
 import ru.skypro.lessons.springboot.weblibrary.exeption.IncorrectEmployeeIdException;
-import org.springframework.data.domain.Page;
-import org.springframework.stereotype.Service;
 import ru.skypro.lessons.springboot.weblibrary.pojo.Employee;
 import ru.skypro.lessons.springboot.weblibrary.pojo.Position;
 import ru.skypro.lessons.springboot.weblibrary.repository.EmployeeRepository;
@@ -15,9 +15,6 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
-import java.util.stream.StreamSupport;
-import java.lang.IllegalArgumentException;
 
 @Service
 
@@ -50,10 +47,9 @@ public class EmployeeServiceImpl implements EmployeeService{
 
     @Override
     public List<EmployeeDTO> getAllEmployees() {
-        Stream<Employee> employeeStream = StreamSupport.stream(employeeRepository.findAll().spliterator(), false);
         // Получаем список сотрудников из репозитория,
         // Преобразуем их в DTO и собираем в список
-        return employeeStream
+        return employeeRepository.findAllEmployees().stream()
                 .map(EmployeeDTO::fromEmployee)
                 .collect(Collectors.toList());
     }
@@ -122,7 +118,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 
 
 //    @Override
-//    public List<Employee> getAllEmployees() {
+//    public List<Employee> getAllEmployeesOld() {
 //        return employeeRepository.getAllEmployees();
 //    }
 //
