@@ -167,9 +167,13 @@ public class EmployeeController {
     }
 
     @GetMapping("/employees/{id}/fullInfo")
-    public ResponseEntity<EmployeeFullInfoDTO> getEmployeeFullInfo(@PathVariable long id) {
-        EmployeeFullInfoDTO employeeFullInfo = employeeService.getEmployeeFullInfo(id);
-        return ResponseEntity.ok(employeeFullInfo);
+    public ResponseEntity<?> getEmployeeFullInfo(@PathVariable long id) {
+        try {
+            EmployeeFullInfoDTO employeeFullInfo = employeeService.getEmployeeFullInfo(id);
+            return ResponseEntity.ok(employeeFullInfo);
+        }  catch (Throwable t) {
+        return ResponseEntity.badRequest().body("Error updating employee: " + t.getMessage());
+    }
     }
 
     @GetMapping("/employees/page")
