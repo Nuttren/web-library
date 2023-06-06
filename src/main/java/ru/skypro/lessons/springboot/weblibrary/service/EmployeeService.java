@@ -1,24 +1,18 @@
 package ru.skypro.lessons.springboot.weblibrary.service;
 
-import ru.skypro.lessons.springboot.weblibrary.dto.EmployeeDTO;
-import ru.skypro.lessons.springboot.weblibrary.dto.EmployeeFullInfoDTO;
 import org.springframework.data.domain.Page;
+import ru.skypro.lessons.springboot.weblibrary.dto.EmployeeDTO;
 import ru.skypro.lessons.springboot.weblibrary.pojo.Employee;
+import ru.skypro.lessons.springboot.weblibrary.pojo.EmployeeFullInfo;
+import ru.skypro.lessons.springboot.weblibrary.pojo.Position;
 
 import java.awt.print.Pageable;
 import java.util.List;
 
 
 public interface EmployeeService {
-    List<EmployeeDTO> getAllEmployees();
-//
-//    Employee findEmployeeWithMinSalary();
-//
-    EmployeeDTO findEmployeeWithMaxSalary();
-//
-//    double getTotalSalary();
 
-//    List<Employee> getEmployeesWithSalaryAboveAverage();
+    EmployeeDTO findEmployeeWithMaxSalary();
 
     EmployeeDTO getEmployeeById(long id);
 
@@ -32,9 +26,13 @@ public interface EmployeeService {
 
     Employee getEmployeeByName(String name);
 
-    List<EmployeeDTO> getEmployeesByPosition(String position);
+    List<EmployeeDTO> getEmployeesByPosition(Position position);
 
-    EmployeeFullInfoDTO getEmployeeFullInfo(long id);
+    List<EmployeeDTO> getAllEmployees();
+
+    EmployeeFullInfo getEmployeeFullInfo(long id);
 
     Page<Employee> getAllEmployees(Pageable pageable);
+
+    List<EmployeeDTO> getEmployeesByPage(int page);
 }

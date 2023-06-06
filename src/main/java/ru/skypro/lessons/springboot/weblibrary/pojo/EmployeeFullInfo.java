@@ -1,17 +1,17 @@
-package ru.skypro.lessons.springboot.weblibrary.dto;
+package ru.skypro.lessons.springboot.weblibrary.pojo;
 
-public class EmployeeFullInfoDTO {
+public class EmployeeFullInfo {
         private String name;
         private double salary;
         private String positionName;
 
-        public EmployeeFullInfoDTO(String name, double salary, String positionName) {
+        public EmployeeFullInfo(String name, double salary, String positionName) {
             this.name = name;
             this.salary = salary;
             this.positionName = positionName;
         }
 
-        public String getPositionName() {
+        public String getName() {
             return name;
         }
 

@@ -12,12 +12,11 @@ public class Employee {
         private int salary;
     @Id
     @Column (name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private long id;
+        private Long id;
 
 
-    @Column(name = "position_id", insertable=false, updatable=false)
-    private Integer positionId;
+    @Column(name = "position_id")
+    private Long positionId;
 
 
 
@@ -33,11 +32,15 @@ public class Employee {
 
     }
 
-    public Integer getPositionId() {
+    public void setPosition(Position position) {
+        this.position = position;
+    }
+
+    public Long getPositionId() {
         return positionId;
     }
 
-    public void setPositionId(Integer positionId) {
+    public void setPositionId(Long positionId) {
         this.positionId = positionId;
     }
     public void setName(String name) {
@@ -52,7 +55,7 @@ public class Employee {
         this.id = id;
     }
 
-    public Employee(String name, int salary, Integer positionId) {
+    public Employee(String name, int salary, Long positionId) {
             this.name = name;
             this.salary = salary;
             this.positionId = positionId;

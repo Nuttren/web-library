@@ -3,12 +3,16 @@ package ru.skypro.lessons.springboot.weblibrary.dto;
 import ru.skypro.lessons.springboot.weblibrary.pojo.Employee;
 
 public class EmployeeDTO {
-    // Поля для хранения идентификатора, имени и зарплаты сотрудника
+
+    //     Поля для хранения идентификатора, имени и зарплаты сотрудника
     private long id;
     private String name;
     private Integer salary;
 
-    private Integer positionId;
+    private Long positionId;
+
+
+
 
 
 
@@ -18,7 +22,7 @@ public class EmployeeDTO {
         employeeDTO.setId(employee.getId());
         employeeDTO.setName(employee.getName());
         employeeDTO.setSalary(employee.getSalary());
-        employeeDTO.setPositionId(employee.getPosition().getPositionId());
+        employeeDTO.setPositionId(employee.getPositionId());
         return employeeDTO;
     }
 
@@ -28,22 +32,19 @@ public class EmployeeDTO {
         employee.setId(this.getId());
         employee.setName(this.getName());
         employee.setSalary(this.getSalary());
-        employee.setPositionId(this.getPositionId());
         return employee;
     }
 
-    public void setSalary(Integer salary) {
-        this.salary = salary;
-    }
 
-    public Integer getPositionId() {
+
+    public Long getPositionId() {
         return positionId;
     }
 
-    public void setPositionId(Integer positionId) {
+    public void setPositionId(Long positionId) {
         this.positionId = positionId;
     }
-    // Геттер и сеттер для идентификатора сотрудника
+//     Геттер и сеттер для идентификатора сотрудника
     public long getId() {
         return id;
     }

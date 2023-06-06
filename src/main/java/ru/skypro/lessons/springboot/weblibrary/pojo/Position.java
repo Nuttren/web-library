@@ -11,12 +11,12 @@ import javax.persistence.Table;
 public class Position {
 
     @Id
-    private int positionId;
+    private Long positionId;
 
     @Column(name = "position_name")
     private String positionName;
 
-    public Position(int positionId, String positionName) {
+    public Position(Long positionId, String positionName) {
         this.positionId = positionId;
         this.positionName = positionName;
     }
@@ -25,11 +25,11 @@ public class Position {
 
     }
 
-    public int getPositionId() {
+    public Long getPositionId() {
         return positionId;
     }
 
-    public void setPositionId(int positionId) {
+    public void setPositionId(Long positionId) {
         this.positionId = positionId;
     }
 
