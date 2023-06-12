@@ -1,16 +1,18 @@
 package ru.skypro.lessons.springboot.weblibrary.repository;
 
-import pojo.Employee;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.stereotype.Repository;
+import ru.skypro.lessons.springboot.weblibrary.pojo.Employee;
+import ru.skypro.lessons.springboot.weblibrary.pojo.Position;
 
 import java.util.List;
 
-public interface EmployeeRepository {
-    public List<Employee> getAllEmployees();
+@Repository
+public interface EmployeeRepository extends PagingAndSortingRepository<Employee, Long> {
 
-    void createEmployee (Employee employee);
 
-    void removeEmployee (int id);
+    List<Employee> findByName(String name);
 
-    List<Employee> getEmployeesWithHigherSalary(int salary);
+    List<Employee> findByPosition(Position position);
 
 }

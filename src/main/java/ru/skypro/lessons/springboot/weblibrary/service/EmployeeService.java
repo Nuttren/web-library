@@ -1,30 +1,38 @@
 package ru.skypro.lessons.springboot.weblibrary.service;
 
-import org.springframework.stereotype.Component;
-import pojo.Employee;
+import org.springframework.data.domain.Page;
+import ru.skypro.lessons.springboot.weblibrary.dto.EmployeeDTO;
+import ru.skypro.lessons.springboot.weblibrary.pojo.Employee;
+import ru.skypro.lessons.springboot.weblibrary.pojo.EmployeeFullInfo;
+import ru.skypro.lessons.springboot.weblibrary.pojo.Position;
 
+import java.awt.print.Pageable;
 import java.util.List;
 
 
 public interface EmployeeService {
-    List<Employee> getAllEmployees();
 
-    Employee findEmployeeWithMinSalary();
+    EmployeeDTO findEmployeeWithMaxSalary();
 
-    Employee findEmployeeWithMaxSalary();
+    EmployeeDTO getEmployeeById(long id);
 
-    double getTotalSalary();
+    void createEmployee (EmployeeDTO employeeDTO);
 
-    List<Employee> getEmployeesWithSalaryAboveAverage();
+    void updateEmployee(long id, EmployeeDTO employeeDTO);
 
-    Employee getEmployeeById(int id);
+    void removeEmployee(long id);
 
-    void createEmployee (Employee employee);
+//    List<Employee> getEmployeesWithHigherSalary(int salary);
 
-    void updateEmployee(int id, Employee employee);
+    Employee getEmployeeByName(String name);
 
-    void removeEmployee(int id);
+    List<EmployeeDTO> getEmployeesByPosition(Position position);
 
-    List<Employee> getEmployeesWithHigherSalary(int salary);
+    List<EmployeeDTO> getAllEmployees();
 
+    EmployeeFullInfo getEmployeeFullInfo(long id);
+
+    Page<Employee> getAllEmployees(Pageable pageable);
+
+    List<EmployeeDTO> getEmployeesByPage(int page);
 }

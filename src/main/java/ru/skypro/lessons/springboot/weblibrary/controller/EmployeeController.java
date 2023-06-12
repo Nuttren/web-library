@@ -3,114 +3,42 @@ package ru.skypro.lessons.springboot.weblibrary.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-import pojo.Employee;
+import ru.skypro.lessons.springboot.weblibrary.dto.EmployeeDTO;
+import ru.skypro.lessons.springboot.weblibrary.exeption.IncorrectEmployeeIdException;
+import ru.skypro.lessons.springboot.weblibrary.pojo.EmployeeFullInfo;
+import ru.skypro.lessons.springboot.weblibrary.pojo.Position;
 import ru.skypro.lessons.springboot.weblibrary.service.EmployeeService;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("/employee")
 @RequiredArgsConstructor
 public class EmployeeController {
 
     private final EmployeeService employeeService;
 
-    @GetMapping("/employee")
-    public List<Employee> getAllEmployees() {
-        return employeeService.getAllEmployees();
-    }
-
-    @GetMapping("/employee/salary/min")
-    public Employee findEmployeeWithMinSalary() {
-        List<Employee> allEmployees = employeeService.getAllEmployees();
-
-        if (allEmployees.isEmpty()) {
-            throw new IllegalArgumentException("Данные не найдены");
-        }
-
-        Employee employeeWithMinSalary = allEmployees.get(0);
-
-        for (Employee employee : allEmployees) {
-            if (employee.getSalary() < employeeWithMinSalary.getSalary()) {
-                employeeWithMinSalary = employee;
-            }
-        }
-        return employeeWithMinSalary;
-    }
-
-    @GetMapping("/employee/salary/max")
-    public Employee findEmployeeWithMaxSalary() {
-        List<Employee> allEmployees = employeeService.getAllEmployees();
-
-        if (allEmployees.isEmpty()) {
-            throw new IllegalArgumentException("Данные не найдены");
-        }
-
-        Employee employeeWithMaxSalary = allEmployees.get(0);
-
-        for (Employee employee : allEmployees) {
-            if (employee.getSalary() > employeeWithMaxSalary.getSalary()) {
-                employeeWithMaxSalary = employee;
-            }
-        }
-
-        return employeeWithMaxSalary;
-    }
-
-    @GetMapping("/employee/salary/sum")
-    public double getTotalSalary() {
-        List<Employee> allEmployees = employeeService.getAllEmployees();
-
-        double totalSalary = 0;
-
-        for (Employee employee : allEmployees) {
-            totalSalary += employee.getSalary();
-        }
-
-        return totalSalary;
-    }
-
-    @GetMapping("employee/salary/high-salary")
-    public List<Employee> getEmployeesWithSalaryAboveAverage() {
-        List<Employee> allEmployees = employeeService.getAllEmployees();
-
-        double totalSalary = 0;
-        int count = 0;
-
-        for (Employee employee : allEmployees) {
-            totalSalary += employee.getSalary();
-            count++;
-        }
-
-        double averageSalary = totalSalary / count;
-
-        List<Employee> employeesAboveAverage = new ArrayList<>();
-
-        for (Employee employee : allEmployees) {
-            if (employee.getSalary() > averageSalary) {
-                employeesAboveAverage.add(employee);
-            }
-        }
-
-        return employeesAboveAverage;
+    @GetMapping("/employee/list")
+    public List<EmployeeDTO> getAllEmployees(){
+            return employeeService.getAllEmployees();
     }
 
     @GetMapping("employee/{id}")
-    public Employee getEmployeeById(@PathVariable int id) {
+    public EmployeeDTO getEmployeeById(@PathVariable long id) {
         try {
-            return employeeService.getAllEmployees().get(id);
-        } catch (Throwable t) {
+            return employeeService.getEmployeeById(id);
+        } catch (IncorrectEmployeeIdException e) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Employee not found with id: " + id);
         }
     }
 
     @PostMapping("employee/create")
-    public ResponseEntity<?> createEmployee(@RequestBody Employee employee) {
+    public ResponseEntity<?> createEmployee(@RequestBody EmployeeDTO employeeDTO) {
         try {
-            employeeService.createEmployee(employee);
+            employeeService.createEmployee(employeeDTO);
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (Throwable t) {
             return ResponseEntity.badRequest().body("Error creating employee");
@@ -118,17 +46,17 @@ public class EmployeeController {
     }
 
     @PutMapping("employee/update/{id}")
-    public ResponseEntity<?> updateEmployee(@PathVariable int id, @RequestBody Employee employee) {
+    public ResponseEntity<?> updateEmployee(@PathVariable long id, @RequestBody EmployeeDTO employeeDTO) {
         try {
-            employeeService.updateEmployee(id, employee);
+            employeeService.updateEmployee(id, employeeDTO);
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (Throwable t) {
-            return ResponseEntity.badRequest().body("Error updating employee");
+            return ResponseEntity.badRequest().body("Error updating employee: " + t.getMessage());
         }
     }
 
     @DeleteMapping("employee/delete/{id}")
-    public ResponseEntity<?> removeEmployee(@PathVariable int id) {
+    public ResponseEntity<?> removeEmployee(@PathVariable long id) {
         try {
             employeeService.removeEmployee(id);
             return new ResponseEntity<>(HttpStatus.OK);
@@ -137,14 +65,50 @@ public class EmployeeController {
         }
     }
 
-    @GetMapping("/employees/salaryHigherThan")
-    public ResponseEntity<List<Employee>> getEmployeesWithHigherSalary(@RequestParam("salary") int salary) {
+    @GetMapping("/employee/salary/max")
+    public ResponseEntity<?> findEmployeeWithMaxSalary() {
         try {
-        List<Employee> employees = employeeService.getEmployeesWithHigherSalary(salary);
-        return ResponseEntity.ok(employees);
+            EmployeeDTO employeeWithMaxSalary = employeeService.findEmployeeWithMaxSalary();
+            return ResponseEntity.ok(employeeWithMaxSalary);
         } catch (Throwable t) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
+            return ResponseEntity.badRequest().body("Employee does not exist");
         }
+
+    }
+
+    @GetMapping("/employees/position")
+    public ResponseEntity<List<EmployeeDTO>> getEmployeesByPosition(@RequestParam(value = "position", required = false) Position position) {
+        List<EmployeeDTO> employees;
+        if (StringUtils.hasText((CharSequence) position)) {
+            employees = employeeService.getEmployeesByPosition(position);
+        } else {
+            employees = employeeService.getAllEmployees();
+        }
+        return ResponseEntity.ok(employees);
+        }
+
+
+    @GetMapping("/employees/{id}/fullInfo")
+    public ResponseEntity<?> getEmployeeFullInfo(@PathVariable long id) {
+        try {
+            EmployeeFullInfo employeeFullInfo = employeeService.getEmployeeFullInfo(id);
+            return ResponseEntity.ok(employeeFullInfo);
+        }  catch (Throwable t) {
+        return ResponseEntity.badRequest().body("Error updating employee: " + t.getMessage());
+    }
+    }
+
+    @GetMapping("/employees/page")
+    public ResponseEntity<List<EmployeeDTO>> getEmployeesByPage(@RequestParam(value = "page", defaultValue = "0") int page) {
+        List<EmployeeDTO> employees = employeeService.getEmployeesByPage(page);
+        return ResponseEntity.ok(employees);
     }
 }
+
+
+
+
+
+
+
 
