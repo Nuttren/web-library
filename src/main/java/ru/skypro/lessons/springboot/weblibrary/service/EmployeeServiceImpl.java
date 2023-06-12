@@ -141,5 +141,14 @@ public class EmployeeServiceImpl implements EmployeeService{
         return employeeDTOList;
     }
 
+    @Override
+    public void saveAllEmployees(List<EmployeeDTO> employees) {
+        List<Employee> employeesList = employees.stream()
+                .map(EmployeeDTO::toEmployee)
+                .collect(Collectors.toList());
+
+        employeeRepository.saveAll(employeesList);
+    }
+
 
 }

@@ -18,6 +18,9 @@ public class Employee {
     @Column(name = "position_id")
     private Long positionId;
 
+    @Column (name = "department_id")
+    private Long departmentId;
+
 
 
     @ManyToOne (cascade = CascadeType.ALL, fetch = FetchType.LAZY)

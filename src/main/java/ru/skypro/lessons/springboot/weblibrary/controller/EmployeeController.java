@@ -1,10 +1,15 @@
 package ru.skypro.lessons.springboot.weblibrary.controller;
 
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.server.ResponseStatusException;
 import ru.skypro.lessons.springboot.weblibrary.dto.EmployeeDTO;
 import ru.skypro.lessons.springboot.weblibrary.exeption.IncorrectEmployeeIdException;
@@ -12,7 +17,9 @@ import ru.skypro.lessons.springboot.weblibrary.pojo.EmployeeFullInfo;
 import ru.skypro.lessons.springboot.weblibrary.pojo.Position;
 import ru.skypro.lessons.springboot.weblibrary.service.EmployeeService;
 
+import java.io.IOException;
 import java.util.List;
+
 
 @RestController
 @RequestMapping("/employee")
@@ -22,8 +29,8 @@ public class EmployeeController {
     private final EmployeeService employeeService;
 
     @GetMapping("/employee/list")
-    public List<EmployeeDTO> getAllEmployees(){
-            return employeeService.getAllEmployees();
+    public List<EmployeeDTO> getAllEmployees() {
+        return employeeService.getAllEmployees();
     }
 
     @GetMapping("employee/{id}")
@@ -85,7 +92,7 @@ public class EmployeeController {
             employees = employeeService.getAllEmployees();
         }
         return ResponseEntity.ok(employees);
-        }
+    }
 
 
     @GetMapping("/employees/{id}/fullInfo")
@@ -93,15 +100,31 @@ public class EmployeeController {
         try {
             EmployeeFullInfo employeeFullInfo = employeeService.getEmployeeFullInfo(id);
             return ResponseEntity.ok(employeeFullInfo);
-        }  catch (Throwable t) {
-        return ResponseEntity.badRequest().body("Error updating employee: " + t.getMessage());
-    }
+        } catch (Throwable t) {
+            return ResponseEntity.badRequest().body("Error updating employee: " + t.getMessage());
+        }
     }
 
     @GetMapping("/employees/page")
     public ResponseEntity<List<EmployeeDTO>> getEmployeesByPage(@RequestParam(value = "page", defaultValue = "0") int page) {
         List<EmployeeDTO> employees = employeeService.getEmployeesByPage(page);
         return ResponseEntity.ok(employees);
+    }
+
+    @PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<String> uploadEmployees(@RequestParam("file") MultipartFile file) {
+        try {
+            // Читаем содержимое файла и преобразуем его в список объектов EmployeeDTO
+            ObjectMapper objectMapper = new ObjectMapper();
+            List<EmployeeDTO> employees = objectMapper.readValue(file.getInputStream(), new TypeReference<>() {});
+
+            // Сохраняем сотрудников в базе данных
+            employeeService.saveAllEmployees(employees);
+
+            return ResponseEntity.ok("Employees uploaded successfully");
+        } catch (IOException e) {
+            return ResponseEntity.badRequest().body("Failed to upload employees: " + e.getMessage());
+        }
     }
 }
 
