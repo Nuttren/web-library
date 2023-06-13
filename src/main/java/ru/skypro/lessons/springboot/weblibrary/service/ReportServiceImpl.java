@@ -11,6 +11,10 @@ import ru.skypro.lessons.springboot.weblibrary.repository.ReportRepository;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Optional;
 
@@ -80,6 +84,27 @@ public class ReportServiceImpl implements ReportService{
         return ReportDTO.fromReport(report);
     }
 
+    @Override
+    public String getReportContentById(Long id) {
+        ReportDTO reportDTO = getReportById(id);
+        if (reportDTO == null) {
+            return null;
+        }
+        String reportFilePath = reportDTO.getFilePath();
+
+        if (reportFilePath == null || reportFilePath.isEmpty()) {
+            return null;
+        }
+
+        try {
+            Path path = Paths.get(reportFilePath);
+            byte[] fileBytes = Files.readAllBytes(path);
+            return new String(fileBytes, StandardCharsets.UTF_8);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 
 
 }

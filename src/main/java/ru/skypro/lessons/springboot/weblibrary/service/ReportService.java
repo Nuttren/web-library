@@ -7,4 +7,6 @@ public interface ReportService {
 
     ReportDTO getReportById(long id);
 
+    String getReportContentById(Long id);
+
 }

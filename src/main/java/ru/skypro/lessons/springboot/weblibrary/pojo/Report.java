@@ -14,22 +14,22 @@ public class Report {
     @Column(name = "department_id", insertable = false, updatable = false)
 
     private Long departmentId;
-    @Column(name = "department_name")
+    @Column
 
     private String departmentName;
-    @Column (name = "employee_count")
+    @Column
 
     private int employeesNumber;
-    @Column (name = "max_salary")
+    @Column
 
     private int maxSalary;
-    @Column (name = "min_salary")
+    @Column
 
     private int minSalary;
-    @Column (name = "avg_salary")
+    @Column
     private int avgSalary;
 
-    @Column (name = "file_path")
+    @Column
     private String filePath;
     @OneToMany
     @JoinColumn(name = "department_id", referencedColumnName = "department_id", insertable = false, updatable = false)
