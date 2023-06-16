@@ -39,3 +39,9 @@ GET http://localhost:8080/employees/{id}/fullInfo
 
 ###
 GET http://localhost:8080/employees/page?page=
+
+###
+POST http://localhost:8080/employees/upload
+
+###
+POST http://localhost:8080/report/

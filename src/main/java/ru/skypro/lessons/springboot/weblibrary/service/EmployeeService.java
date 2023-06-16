@@ -35,4 +35,6 @@ public interface EmployeeService {
     Page<Employee> getAllEmployees(Pageable pageable);
 
     List<EmployeeDTO> getEmployeesByPage(int page);
+
+    void saveAllEmployees (List<EmployeeDTO> employees);
 }
