@@ -45,3 +45,12 @@ POST http://localhost:8080/employees/upload
 
 ###
 POST http://localhost:8080/report/
+
+###
+POST http://localhost:8080/avatar/upload
+
+###
+POST http://localhost:8080/avatar/id
+
+###
+POST http://localhost:8080/avatar/file/fileName:.+
