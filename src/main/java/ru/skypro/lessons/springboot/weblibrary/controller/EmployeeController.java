@@ -28,12 +28,12 @@ public class EmployeeController {
 
     private final EmployeeService employeeService;
 
-    @GetMapping("/employee/list")
+    @GetMapping("/api/public/list")
     public List<EmployeeDTO> getAllEmployees() {
         return employeeService.getAllEmployees();
     }
 
-    @GetMapping("employee/{id}")
+    @GetMapping("/api/public/{id}")
     public EmployeeDTO getEmployeeById(@PathVariable long id) {
         try {
             return employeeService.getEmployeeById(id);
@@ -42,7 +42,7 @@ public class EmployeeController {
         }
     }
 
-    @PostMapping("employee/create")
+    @PostMapping("/api/admin/create")
     public ResponseEntity<?> createEmployee(@RequestBody EmployeeDTO employeeDTO) {
         try {
             employeeService.createEmployee(employeeDTO);
@@ -52,7 +52,7 @@ public class EmployeeController {
         }
     }
 
-    @PutMapping("employee/update/{id}")
+    @PutMapping("/api/admin/update/{id}")
     public ResponseEntity<?> updateEmployee(@PathVariable long id, @RequestBody EmployeeDTO employeeDTO) {
         try {
             employeeService.updateEmployee(id, employeeDTO);
@@ -62,7 +62,7 @@ public class EmployeeController {
         }
     }
 
-    @DeleteMapping("employee/delete/{id}")
+    @DeleteMapping("/api/admin/delete/{id}")
     public ResponseEntity<?> removeEmployee(@PathVariable long id) {
         try {
             employeeService.removeEmployee(id);
@@ -72,7 +72,7 @@ public class EmployeeController {
         }
     }
 
-    @GetMapping("/employee/salary/max")
+    @GetMapping("/api/user/employee/salary/max")
     public ResponseEntity<?> findEmployeeWithMaxSalary() {
         try {
             EmployeeDTO employeeWithMaxSalary = employeeService.findEmployeeWithMaxSalary();
@@ -83,7 +83,7 @@ public class EmployeeController {
 
     }
 
-    @GetMapping("/employees/position")
+    @GetMapping("/api/user/employees/position")
     public ResponseEntity<List<EmployeeDTO>> getEmployeesByPosition(@RequestParam(value = "position", required = false) Position position) {
         List<EmployeeDTO> employees;
         if (StringUtils.hasText((CharSequence) position)) {
@@ -95,7 +95,7 @@ public class EmployeeController {
     }
 
 
-    @GetMapping("/employees/{id}/fullInfo")
+    @GetMapping("/api/user/employees/{id}/fullInfo")
     public ResponseEntity<?> getEmployeeFullInfo(@PathVariable long id) {
         try {
             EmployeeFullInfo employeeFullInfo = employeeService.getEmployeeFullInfo(id);
@@ -105,13 +105,13 @@ public class EmployeeController {
         }
     }
 
-    @GetMapping("/employees/page")
+    @GetMapping("/api/user/employees/page")
     public ResponseEntity<List<EmployeeDTO>> getEmployeesByPage(@RequestParam(value = "page", defaultValue = "0") int page) {
         List<EmployeeDTO> employees = employeeService.getEmployeesByPage(page);
         return ResponseEntity.ok(employees);
     }
 
-    @PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @PostMapping(value = "/api/public/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<String> uploadEmployees(@RequestParam("file") MultipartFile file) {
         try {
             // Читаем содержимое файла и преобразуем его в список объектов EmployeeDTO

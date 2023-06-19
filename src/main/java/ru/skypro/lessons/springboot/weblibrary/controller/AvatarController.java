@@ -18,7 +18,7 @@ import java.io.IOException;
 public class AvatarController {
     private final AvatarService avatarService;
 
-    @PostMapping(value ="/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @PostMapping(value ="/api/public/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<String> uploadAvatar(@RequestParam("file") MultipartFile file) {
         try {
             avatarService.uploadAvatar(file);
@@ -29,12 +29,12 @@ public class AvatarController {
         }
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/api/public/{id}")
     public ResponseEntity<byte[]> getAvatarById(@PathVariable Long id) {
         return avatarService.getAvatarImageById(id);
     }
 
-    @GetMapping("/file/{fileName:.+}")
+    @GetMapping("/api/public/file/{fileName:.+}")
     public ResponseEntity<Resource> getAvatarImageFromFile(@PathVariable String fileName) {
         return avatarService.getAvatarImageFromFile(fileName);
     }

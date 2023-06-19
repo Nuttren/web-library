@@ -22,7 +22,7 @@ public class ReportController {
         }
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/api/public/{id}")
     public ResponseEntity<String> getReportById(@PathVariable Long id) {
         String reportContent = reportService.getReportContentById(id);
         if (reportContent == null) {
