@@ -29,16 +29,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/api/admin/**").hasRole("ADMIN")
-                .antMatchers("/api/user/**").hasAnyRole("ADMIN", "USER")
+                .antMatchers("/api/admin/**").hasAuthority("ADMIN")
+                .antMatchers("/api/user/**").hasAnyAuthority("ADMIN", "USER")
                 .antMatchers("/api/public/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .and()
-                .logout().logoutSuccessUrl("/login").permitAll();
-//                .and()
-//                .csrf().disable();
+                .logout().logoutSuccessUrl("/login").permitAll()
+                .and()
+                .csrf().disable();
     }
 
     @Bean
