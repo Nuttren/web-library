@@ -72,7 +72,7 @@ public class EmployeeController {
         }
     }
 
-    @GetMapping("/api/user/employee/salary/max")
+    @GetMapping("/api/admin/salary/max")
     public ResponseEntity<?> findEmployeeWithMaxSalary() {
         try {
             EmployeeDTO employeeWithMaxSalary = employeeService.findEmployeeWithMaxSalary();
@@ -83,7 +83,7 @@ public class EmployeeController {
 
     }
 
-    @GetMapping("/api/user/employees/position")
+    @GetMapping("/api/user/position")
     public ResponseEntity<List<EmployeeDTO>> getEmployeesByPosition(@RequestParam(value = "position", required = false) Position position) {
         List<EmployeeDTO> employees;
         if (StringUtils.hasText((CharSequence) position)) {

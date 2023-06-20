@@ -23,7 +23,7 @@ POST http://localhost:8080/employee/create
 PUT http://localhost:8080/employee/update/id
 
 ###  Удаление сотрудника
-DELETE http://localhost:8080/employee/delete/{id}
+DELETE http://localhost:8080/employee/api/admin/delete/{id}
 
 ###  Всу сотрудники, зарплата которых выше переданного параметра salary.
 GET http://localhost:8080/employee/salaryHigherThan

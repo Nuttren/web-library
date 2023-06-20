@@ -18,6 +18,7 @@ import java.util.stream.Collectors;
 @Service
 public class UserService implements UserDetailsService {
 
+
     private final UserRepository userRepository;
 
     public UserService(UserRepository userRepository) {
@@ -26,6 +27,7 @@ public class UserService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+
         Optional<User> userOptional = Optional.ofNullable(userRepository.findByUsername(username));
         User user = userOptional.orElseThrow(() -> new UsernameNotFoundException("User not found with username: " + username));
 
@@ -43,4 +45,5 @@ public class UserService implements UserDetailsService {
                 .map(role -> new SimpleGrantedAuthority(role.getRoleName()))
                 .collect(Collectors.toList());
     }
+
 }
