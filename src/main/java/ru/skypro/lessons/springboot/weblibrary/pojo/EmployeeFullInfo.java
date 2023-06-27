@@ -22,5 +22,14 @@ public class EmployeeFullInfo {
         public String getPosition() {
             return positionName;
         }
+
+    @Override
+    public String toString() {
+        return "EmployeeFullInfo{" +
+                "name='" + name + '\'' +
+                ", salary=" + salary +
+                ", positionName='" + positionName + '\'' +
+                '}';
     }
+}
 

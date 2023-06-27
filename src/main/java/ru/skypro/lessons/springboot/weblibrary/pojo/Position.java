@@ -40,4 +40,12 @@ public class Position {
     public void setPositionName(String positionName) {
         this.positionName = positionName;
     }
+
+    @Override
+    public String toString() {
+        return "Position{" +
+                "positionId=" + positionId +
+                ", positionName='" + positionName + '\'' +
+                '}';
+    }
 }

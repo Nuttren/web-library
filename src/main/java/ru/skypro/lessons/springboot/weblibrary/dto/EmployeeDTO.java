@@ -70,4 +70,14 @@ public class EmployeeDTO {
     public void setSalary(int salary) {
         this.salary = salary;
     }
+
+    @Override
+    public String toString() {
+        return "EmployeeDTO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", salary=" + salary +
+                ", positionId=" + positionId +
+                '}';
+    }
 }
