@@ -5,7 +5,7 @@ GET http://localhost:8080/employee/salary/sum
 GET http://localhost:8080/employee/salary/min
 
 ### Получение сотрудника с максимальной зарплатой
-GET http://localhost:8080/employee/salary/max
+GET http://localhost:8080/employee/api/admin/salary/max
 
 ### Получение всех сотрудников, зарплата которых больше средней
 GET http://localhost:8080/employee/salary/high-salary
@@ -23,7 +23,7 @@ POST http://localhost:8080/employee/create
 PUT http://localhost:8080/employee/update/id
 
 ###  Удаление сотрудника
-DELETE http://localhost:8080/employee/delete/{id}
+DELETE http://localhost:8080/employee/api/admin/delete/{id}
 
 ###  Всу сотрудники, зарплата которых выше переданного параметра salary.
 GET http://localhost:8080/employee/salaryHigherThan
