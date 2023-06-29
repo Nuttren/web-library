@@ -20,7 +20,7 @@ databaseChangeLog:
                   type: integer
               - column:
                   name: position_id
-                  type: integer
+                  type: bigint
                   constraints:
                     foreignKey:
                       name: fk_employee_position
@@ -40,7 +40,7 @@ databaseChangeLog:
             columns: # колонки к данной таблице
               - column: # колонка
                   name: position_id # название колонки
-                  type: int # тип
+                  type: bigint # тип
                   autoIncrement: true # признак автоинкремента колонки
                   constraints: # ограничения колонки
                     primaryKey: true
