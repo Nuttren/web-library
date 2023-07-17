@@ -1,0 +1,49 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1 # идентификатор набора изменений
+      author: Roman # имя разработчика, который добавил набор изменений
+      changes: # список изменений в этом наборе
+        - createTable: # команда liquibase — создает таблицу
+            tableName: employee # название таблицы
+            columns: # колонки к данной таблице
+              - column: # колонка
+                  name: id # название колонки
+                  type: bigint # тип
+                  autoIncrement: true # признак автоинкремента колонки
+                  constraints: # ограничения колонки
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar
+              - column:
+                  name: salary
+                  type: integer
+              - column:
+                  name: position_id
+                  type: bigint
+                  constraints:
+                    foreignKey:
+                      name: fk_employee_position
+                      referencedTableName: position
+                      referencedColumnNames: position_id
+              - column:
+                  name: department_id
+                  type: bigint
+                  constraints:
+                    foreignKey:
+                      name: fk_employee_department
+                      referencedTableName: report
+                      referencedColumnNames: department_id
+
+        - createTable: # команда liquibase — создает таблицу
+            tableName: position # название таблицы
+            columns: # колонки к данной таблице
+              - column: # колонка
+                  name: position_id # название колонки
+                  type: bigint # тип
+                  autoIncrement: true # признак автоинкремента колонки
+                  constraints: # ограничения колонки
+                    primaryKey: true
+              - column:
+                  name: position_name
+                  type: varchar
