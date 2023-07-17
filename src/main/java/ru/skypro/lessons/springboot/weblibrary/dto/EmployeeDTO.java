@@ -2,6 +2,8 @@ package ru.skypro.lessons.springboot.weblibrary.dto;
 
 import ru.skypro.lessons.springboot.weblibrary.pojo.Employee;
 
+import java.util.Objects;
+
 public class EmployeeDTO {
 
     //     Поля для хранения идентификатора, имени и зарплаты сотрудника
@@ -79,5 +81,18 @@ public class EmployeeDTO {
                 ", salary=" + salary +
                 ", positionId=" + positionId +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof EmployeeDTO)) return false;
+        EmployeeDTO that = (EmployeeDTO) o;
+        return getId() == that.getId() && Objects.equals(getName(), that.getName()) && Objects.equals(getSalary(), that.getSalary()) && Objects.equals(getPositionId(), that.getPositionId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getName(), getSalary(), getPositionId());
     }
 }
