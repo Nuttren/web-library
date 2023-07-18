@@ -25,6 +25,16 @@ public class AvatarDTO {
         avatarDTO.setData(avatar.getData());
         return avatarDTO;
     }
+    public Avatar toAvatar() {
+        Avatar avatar = new Avatar();
+        avatar.setAvatarId(this.getAvatarId());
+        avatar.setFilePath(this.getFilePath());
+        avatar.setFileSize(this.getFileSize());
+        avatar.setMediaType(this.getMediaType());
+        avatar.setStudentId(this.getStudentId());
+        avatar.setData(this.getData());
+        return avatar;
+    }
 
     public byte[] getData() {
         return data;
