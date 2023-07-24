@@ -18,6 +18,7 @@ public class EmployeeDTO {
 
 
 
+
     // Метод для преобразования сущности Employee в объект EmployeeDTO
     public static EmployeeDTO fromEmployee (Employee employee) {
         EmployeeDTO employeeDTO = new EmployeeDTO();
@@ -95,4 +96,5 @@ public class EmployeeDTO {
     public int hashCode() {
         return Objects.hash(getId(), getName(), getSalary(), getPositionId());
     }
+
 }

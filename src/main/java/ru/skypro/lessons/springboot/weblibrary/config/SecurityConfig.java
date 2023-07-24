@@ -27,7 +27,7 @@ public class SecurityConfig  {
                 .passwordEncoder(passwordEncoder());
     }
 
-    @Bean
+    @Bean (name = "securityFilterChain")
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests(authorize -> {
@@ -47,7 +47,7 @@ public class SecurityConfig  {
         return http.build();
     }
 
-    @Bean
+
     public PasswordEncoder passwordEncoder() {
         return NoOpPasswordEncoder.getInstance();
 }

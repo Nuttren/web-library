@@ -83,4 +83,11 @@ public class Employee {
                 ", position=" + position +
                 '}';
     }
+
+    public Employee(Long id, String name, int salary, Position position) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+        this.position = position;
+    }
 }

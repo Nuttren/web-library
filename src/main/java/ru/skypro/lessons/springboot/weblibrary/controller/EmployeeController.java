@@ -118,7 +118,8 @@ public class EmployeeController {
         try {
             // Читаем содержимое файла и преобразуем его в список объектов EmployeeDTO
             ObjectMapper objectMapper = new ObjectMapper();
-            List<EmployeeDTO> employees = objectMapper.readValue(file.getInputStream(), new TypeReference<>() {});
+            List<EmployeeDTO> employees = objectMapper.readValue(file.getInputStream(), new TypeReference<>() {
+            });
 
             // Сохраняем сотрудников в базе данных
             employeeService.saveAllEmployees(employees);
@@ -128,6 +129,7 @@ public class EmployeeController {
             return ResponseEntity.badRequest().body("Failed to upload employees: " + e.getMessage());
         }
     }
+
 }
 
 
