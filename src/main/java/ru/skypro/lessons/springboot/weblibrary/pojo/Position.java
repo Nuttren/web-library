@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Objects;
 
 @Entity
 @Table(name = "position")
@@ -47,5 +48,18 @@ public class Position {
                 "positionId=" + positionId +
                 ", positionName='" + positionName + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Position)) return false;
+        Position position = (Position) o;
+        return Objects.equals(getPositionId(), position.getPositionId()) && Objects.equals(getPositionName(), position.getPositionName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getPositionId(), getPositionName());
     }
 }

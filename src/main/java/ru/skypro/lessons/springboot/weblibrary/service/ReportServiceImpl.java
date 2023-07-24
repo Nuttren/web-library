@@ -36,7 +36,7 @@ public class ReportServiceImpl implements ReportService{
         List<EmployeeDTO> reportDTOList = employeeService.getAllEmployees();
         Report report = new Report();
 
-        int maxSalary =  reportDTOList.stream()
+        int maxSalary = reportDTOList.stream()
                 .mapToInt(EmployeeDTO::getSalary)
                 .max()
                 .orElse(0);
@@ -50,31 +50,31 @@ public class ReportServiceImpl implements ReportService{
                 .mapToInt(EmployeeDTO::getSalary)
                 .average()
                 .orElse(0);
+
         report.setDepartmentName("Отдел разработки");
         report.setEmployeesNumber(reportDTOList.size());
         report.setMaxSalary(maxSalary);
         report.setMinSalary(minSalary);
         report.setAvgSalary(avgSalary);
-        Report savedReport = reportRepository.save(report);
 
-        String reportFileName = "report_" + savedReport.getDepartmentId() + ".json";
+        String reportFileName = "report_" + report.getDepartmentId() + ".json";
         String reportFilePath = REPORT_DIRECTORY + "/" + reportFileName;
 
-        // Создание и сохранение JSON-файла
+        // Create and save JSON file
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            String json = objectMapper.writeValueAsString(savedReport);
+            String json = objectMapper.writeValueAsString(report);
             FileWriter fileWriter = new FileWriter(reportFilePath);
             fileWriter.write(json);
             fileWriter.close();
         } catch (IOException e) {
-            // Обработка ошибки сохранения файла
+            // Handle file saving error
             e.printStackTrace();
         }
 
-        savedReport.setFilePath(reportFilePath);
-        reportRepository.save(savedReport);
-        return savedReport.getDepartmentId().intValue();
+        report.setFilePath(reportFilePath);
+        reportRepository.save(report);
+        return report.getDepartmentId().intValue();
     }
 
     @Override

@@ -2085,3 +2085,76 @@ Caused by: liquibase.exception.ValidationFailedException: Validation Failed:
 21:08:12.241 [http-nio-8080-exec-6] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Employees are :Employee{name='Vasya', salary=100000, id=1, positionId=1, departmentId=null, position=Position{positionId=1, positionName='Developer'}}
 21:08:20.838 [http-nio-8080-exec-5] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Was invoked method to getAllEmployees
 21:08:20.841 [http-nio-8080-exec-5] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Employees are :[EmployeeDTO{id=1, name='Vasya', salary=100000, positionId=1}]
+10:22:41.324 [main] ERROR r.s.l.s.w.s.EmployeeServiceImpl - There is no employee with id = 9999
+10:28:33.690 [main] ERROR r.s.l.s.w.s.EmployeeServiceImpl - There is no employee with id = -1
+10:28:33.713 [main] ERROR r.s.l.s.w.s.EmployeeServiceImpl - There is no employee with id = 0
+10:31:15.579 [main] ERROR r.s.l.s.w.s.EmployeeServiceImpl - There is no employee with id = 9999
+10:31:15.645 [main] ERROR r.s.l.s.w.s.EmployeeServiceImpl - There is no employee with id = -1
+10:31:15.649 [main] ERROR r.s.l.s.w.s.EmployeeServiceImpl - There is no employee with id = 0
+10:52:16.035 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+10:52:49.630 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+10:53:09.243 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+10:55:51.794 [http-nio-8080-exec-4] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Was invoked method to getAllEmployees
+10:55:52.043 [http-nio-8080-exec-4] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Employees are :[EmployeeDTO{id=1, name='Vasya', salary=100000, positionId=1}]
+13:54:24.999 [main] ERROR r.s.l.s.w.s.EmployeeServiceImpl - There is no employee with id = 9999
+13:54:25.069 [main] ERROR r.s.l.s.w.s.EmployeeServiceImpl - There is no employee with id = -1
+13:54:25.073 [main] ERROR r.s.l.s.w.s.EmployeeServiceImpl - There is no employee with id = 0
+10:21:18.367 [main] ERROR r.s.l.s.w.s.EmployeeServiceImpl - There is no employee with id = 9999
+10:21:18.452 [main] ERROR r.s.l.s.w.s.EmployeeServiceImpl - There is no employee with id = -1
+10:21:18.455 [main] ERROR r.s.l.s.w.s.EmployeeServiceImpl - There is no employee with id = 0
+11:48:55.763 [main] ERROR r.s.l.s.w.s.EmployeeServiceImpl - There is no employee with id = 9999
+11:48:55.843 [main] ERROR r.s.l.s.w.s.EmployeeServiceImpl - There is no employee with id = -1
+11:48:55.846 [main] ERROR r.s.l.s.w.s.EmployeeServiceImpl - There is no employee with id = 0
+12:00:25.448 [main] INFO  r.s.l.s.w.s.ReportServiceImplTest - Starting ReportServiceImplTest using Java 11.0.17 on MSI with PID 1872 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+12:00:25.451 [main] DEBUG r.s.l.s.w.s.ReportServiceImplTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+12:00:25.451 [main] INFO  r.s.l.s.w.s.ReportServiceImplTest - The following 1 profile is active: "dev"
+12:00:30.394 [main] INFO  r.s.l.s.w.s.ReportServiceImplTest - Started ReportServiceImplTest in 5.205 seconds (JVM running for 6.08)
+12:00:46.067 [main] INFO  r.s.l.s.w.s.ReportServiceImplTest - Starting ReportServiceImplTest using Java 11.0.17 on MSI with PID 6188 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+12:00:46.069 [main] DEBUG r.s.l.s.w.s.ReportServiceImplTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+12:00:46.070 [main] INFO  r.s.l.s.w.s.ReportServiceImplTest - The following 1 profile is active: "dev"
+12:00:50.699 [main] INFO  r.s.l.s.w.s.ReportServiceImplTest - Started ReportServiceImplTest in 4.888 seconds (JVM running for 5.75)
+12:12:46.228 [http-nio-8080-exec-1] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Was invoked method to getAllEmployees
+12:12:46.561 [http-nio-8080-exec-1] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Employees are :[EmployeeDTO{id=1, name='Vasya', salary=100000, positionId=1}]
+12:13:31.350 [http-nio-8080-exec-2] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Was invoked method to getAllEmployees
+12:13:31.416 [http-nio-8080-exec-2] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Employees are :[EmployeeDTO{id=1, name='Vasya', salary=100000, positionId=1}]
+12:13:46.583 [http-nio-8080-exec-2] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Was invoked method to getAllEmployees
+12:13:46.591 [http-nio-8080-exec-2] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Employees are :[EmployeeDTO{id=1, name='Vasya', salary=100000, positionId=1}]

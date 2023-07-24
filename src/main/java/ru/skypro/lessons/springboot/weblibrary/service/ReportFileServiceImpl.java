@@ -9,7 +9,7 @@ import java.io.ObjectOutputStream;
 
 public class ReportFileServiceImpl implements ReportFileService{
 
-    private static final String REPORT_DIRECTORY = "C:/Reports"; // Замените на путь к директории, где будет сохраняться отчет
+    private static  final String REPORT_DIRECTORY = "C:/Reports"; // Замените на путь к директории, где будет сохраняться отчет
 
     @Override
     public void saveReportToFile(ReportDTO reportDTO, String fileName) {

@@ -22,7 +22,12 @@ import java.util.Optional;
 
 @Service
 public class AvatarServiceImpl implements AvatarService{
-    private static final String UPLOAD_DIRECTORY = "C:/Media";
+    private final String UPLOAD_DIRECTORY = "C:/Media";
+
+    public String getUPLOAD_DIRECTORY() {
+        return UPLOAD_DIRECTORY;
+    }
+
     private final AvatarRepository avatarRepository;
 
     public AvatarServiceImpl(AvatarRepository avatarRepository) {
@@ -99,6 +104,7 @@ public class AvatarServiceImpl implements AvatarService{
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
+
     }
 
 
