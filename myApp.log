@@ -6954,3 +6954,214 @@ Caused by: liquibase.exception.ChangeLogParseException: classpath:liquibase/chan
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
 	... 88 common frames omitted
+21:26:41.460 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+21:26:41.462 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+21:30:19.976 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+21:30:19.977 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+21:34:19.246 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+21:34:19.247 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+21:38:16.248 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+21:38:16.250 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+21:54:04.787 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+21:54:04.790 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+21:59:25.473 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+21:59:25.474 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+21:59:54.459 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 21192 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+21:59:54.461 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+21:59:54.462 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+21:59:59.490 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 5.286 seconds (JVM running for 6.111)
+21:59:59.756 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - Before saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+21:59:59.905 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+21:59:59.906 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:00:49.397 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 24788 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+22:00:49.398 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+22:00:49.399 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+22:00:53.860 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.71 seconds (JVM running for 5.539)
+22:00:54.171 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - Before saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+22:00:54.354 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:00:54.355 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:06:01.332 [http-nio-8080-exec-10] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Was invoked method to getAllEmployees
+22:06:01.715 [http-nio-8080-exec-10] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Employees are :[EmployeeDTO{id=1, name='Vasya', salary=100000, positionId=1}]
+22:09:10.560 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 10964 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+22:09:10.568 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+22:09:10.569 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+22:09:15.282 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.971 seconds (JVM running for 5.831)
+22:09:15.580 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - Before saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+22:09:15.744 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:09:15.746 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:11:19.893 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 14664 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+22:11:19.895 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+22:11:19.895 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+22:11:24.431 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.771 seconds (JVM running for 5.609)
+22:11:24.656 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - Before saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+22:11:24.818 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:11:24.819 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:12:58.592 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 23832 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+22:12:58.593 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+22:12:58.594 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+22:13:02.964 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.601 seconds (JVM running for 5.438)
+22:13:03.227 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - Before saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+22:13:03.408 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:13:03.409 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:16:38.448 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 16144 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+22:16:38.450 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+22:16:38.450 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+22:16:43.270 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 5.06 seconds (JVM running for 5.892)
+22:16:43.656 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - Before saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+22:16:43.845 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:16:43.846 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:18:24.303 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 9340 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+22:18:24.305 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+22:18:24.305 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+22:18:28.712 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.642 seconds (JVM running for 5.474)
+22:18:28.924 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - Before saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+22:18:29.109 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:18:29.110 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:20:23.579 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 17036 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+22:20:23.581 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+22:20:23.581 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+22:20:28.266 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.937 seconds (JVM running for 5.769)
+22:20:28.478 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - Before saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+22:20:28.653 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:20:28.655 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:21:25.224 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 21900 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+22:21:25.226 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+22:21:25.226 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+22:21:29.744 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.765 seconds (JVM running for 5.608)
+22:21:30.029 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - Before saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+22:21:30.210 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:21:30.212 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:21:47.116 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 15920 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+22:21:47.117 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+22:21:47.118 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+22:21:51.700 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.837 seconds (JVM running for 5.687)
+22:21:52.088 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - Before saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+22:21:52.239 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - After saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+22:21:52.256 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:21:52.257 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:23:22.632 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 6600 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+22:23:22.635 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+22:23:22.635 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+22:23:27.819 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 5.421 seconds (JVM running for 6.259)
+22:23:28.168 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - Before saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+22:23:28.388 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:23:28.391 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:23:53.194 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 15676 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+22:23:53.196 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+22:23:53.196 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+22:23:57.780 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.835 seconds (JVM running for 5.674)
+22:23:58.054 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - Before saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+22:23:58.186 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - After saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+22:23:58.203 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:23:58.205 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:26:18.976 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 25684 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+22:26:18.978 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+22:26:18.979 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+22:26:23.652 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.913 seconds (JVM running for 5.775)
+22:26:23.864 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - Before saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+22:26:24.043 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:26:24.044 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:26:35.789 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 22720 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+22:26:35.791 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+22:26:35.791 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+22:26:40.652 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 5.111 seconds (JVM running for 6.074)
+22:26:40.965 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - Before saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+22:26:41.117 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:26:41.118 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:27:58.076 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 19448 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+22:27:58.078 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+22:27:58.078 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+22:28:02.702 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.874 seconds (JVM running for 5.721)
+22:28:03.035 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - Before saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+22:28:03.183 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:28:03.184 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:32:40.952 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 13856 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+22:32:40.954 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+22:32:40.954 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+22:32:45.627 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.93 seconds (JVM running for 5.775)
+22:32:45.919 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - Before saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+22:32:46.098 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:32:46.099 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:39:44.526 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 17036 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+22:39:44.529 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+22:39:44.530 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+22:39:49.269 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.966 seconds (JVM running for 5.813)
+22:39:49.594 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:39:49.595 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:40:48.759 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 20392 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+22:40:48.760 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+22:40:48.760 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+22:40:53.465 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.953 seconds (JVM running for 5.803)
+22:40:53.823 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:40:53.825 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-212]
+22:44:07.376 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 25380 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+22:44:07.377 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+22:44:07.378 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+22:44:11.972 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.838 seconds (JVM running for 5.674)
+22:50:52.401 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 15980 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+22:50:52.403 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+22:50:52.403 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+22:50:56.860 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.73 seconds (JVM running for 5.571)
+22:51:53.557 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 18812 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+22:51:53.559 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+22:51:53.559 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+22:51:57.965 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.646 seconds (JVM running for 5.487)
+22:59:28.829 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 9928 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+22:59:28.831 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+22:59:28.831 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+22:59:33.379 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.798 seconds (JVM running for 5.655)
+23:02:17.975 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 22432 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+23:02:17.977 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+23:02:17.977 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+23:02:22.429 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.682 seconds (JVM running for 5.537)
+23:02:43.771 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 19448 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+23:02:43.772 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+23:02:43.773 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+23:02:48.247 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.72 seconds (JVM running for 5.594)
+23:03:30.905 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 18364 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+23:03:30.907 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+23:03:30.907 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+23:03:35.327 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.665 seconds (JVM running for 5.514)
+23:05:05.549 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 22880 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+23:05:05.551 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+23:05:05.552 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+23:05:09.999 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.692 seconds (JVM running for 5.539)
+23:08:56.443 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 14908 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+23:08:56.445 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+23:08:56.445 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+23:09:00.928 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.738 seconds (JVM running for 5.622)
+23:11:07.435 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 24016 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+23:11:07.436 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+23:11:07.437 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+23:11:11.795 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.608 seconds (JVM running for 5.503)
+23:13:52.558 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 10944 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+23:13:52.561 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+23:13:52.561 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+23:13:56.858 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.553 seconds (JVM running for 5.392)
+23:24:25.901 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 5432 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+23:24:25.903 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+23:24:25.904 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+23:24:30.355 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.712 seconds (JVM running for 5.572)
+23:27:02.985 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 23612 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+23:27:02.987 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+23:27:02.987 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+23:27:07.547 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.798 seconds (JVM running for 5.637)
+23:27:49.535 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 3468 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+23:27:49.537 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+23:27:49.538 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+23:27:53.926 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.64 seconds (JVM running for 5.517)
+23:32:45.482 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 14152 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+23:32:45.485 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+23:32:45.485 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+23:32:49.965 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.717 seconds (JVM running for 5.567)
+23:32:50.198 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - Before saving employees: []
+23:33:40.335 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 8884 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+23:33:40.336 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+23:33:40.337 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+23:33:44.717 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.62 seconds (JVM running for 5.46)
+23:33:44.970 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - Before saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+23:34:32.581 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 21012 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+23:34:32.583 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+23:34:32.590 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+23:34:37.017 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.679 seconds (JVM running for 5.515)
+23:34:37.332 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - After saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]

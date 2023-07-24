@@ -2,7 +2,10 @@ package ru.skypro.lessons.springboot.weblibrary.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -12,53 +15,59 @@ import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+import org.springframework.transaction.annotation.Transactional;
 import ru.skypro.lessons.springboot.weblibrary.config.TestSecurityConfig;
 import ru.skypro.lessons.springboot.weblibrary.dto.EmployeeDTO;
+import ru.skypro.lessons.springboot.weblibrary.pojo.Employee;
 import ru.skypro.lessons.springboot.weblibrary.pojo.EmployeeFullInfo;
+import ru.skypro.lessons.springboot.weblibrary.repository.EmployeeRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.hamcrest.Matchers.hasSize;
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-
 @SpringBootTest
 @AutoConfigureMockMvc
 @Import(TestSecurityConfig.class) // Импорт тестовой конфигурации
+@AutoConfigureTestDatabase
+@Transactional
 public class EmployeeControllerIntegrationTest {
 
+    private static final Logger logger = LoggerFactory.getLogger(EmployeeServiceImpl.class);
     @Autowired
     private MockMvc mockMvc;
 
     @MockBean
     private EmployeeServiceImpl employeeService;
 
-
+    @Autowired
+    private EmployeeRepository employeeRepository;
     @Test
     public void testGetAllEmployees() throws Exception {
         // Создание тестовых данных
-        List<EmployeeDTO> employeeDTOList = new ArrayList<>();
-        EmployeeDTO employee1 = new EmployeeDTO();
+        Employee employee1 = new Employee();
+        employee1.setId(1L);
         employee1.setName("John");
         employee1.setSalary(5000);
-        EmployeeDTO employee2 = new EmployeeDTO();
+        Employee employee2 = new Employee();
+        employee2.setId(2L);
         employee2.setName("Alice");
         employee2.setSalary(7000);
-        EmployeeDTO employee3 = new EmployeeDTO();
+        Employee employee3 = new Employee();
+        employee3.setId(3L);
         employee3.setName("Bob");
         employee3.setSalary(6000);
-        employeeDTOList.add(employee1);
-        employeeDTOList.add(employee2);
-        employeeDTOList.add(employee3);
 
-        // Настройка мок-сервиса
-        when(employeeService.getAllEmployees()).thenReturn(employeeDTOList);
 
-        // Выполнение запроса и проверка результата
+        // Сохраняем тестовые данные в базу данных H2
+        employeeRepository.saveAll(List.of(employee1, employee2, employee3));
+        logger.info("After saving employees: {}", employeeRepository.findAll());
+
+        // Выполняем GET запрос на адрес "/public/list"
         mockMvc.perform(get("/public/list"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(3))) // Проверка наличия 3 элементов в списке
@@ -69,7 +78,6 @@ public class EmployeeControllerIntegrationTest {
                 .andExpect(jsonPath("$[2].name").value("Bob")) // Проверка имени третьего сотрудника
                 .andExpect(jsonPath("$[2].salary").value(6000)); // Проверка зарплаты третьего сотрудника
     }
-
 
     @Test
     public void testCreateEmployee() throws Exception {
@@ -90,6 +98,7 @@ public class EmployeeControllerIntegrationTest {
         // Проверка, что метод createEmployee был вызван с правильным аргументом
         verify(employeeService, times(1)).createEmployee(eq(employeeDTO));
     }
+
 
     // Вспомогательный метод для преобразования объекта в JSON строку
     private static String asJsonString(Object obj) {
