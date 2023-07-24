@@ -7165,3 +7165,142 @@ Caused by: liquibase.exception.ChangeLogParseException: classpath:liquibase/chan
 23:34:32.590 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
 23:34:37.017 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.679 seconds (JVM running for 5.515)
 23:34:37.332 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - After saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+23:43:50.431 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 18660 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+23:43:50.432 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+23:43:50.433 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+23:43:54.901 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.72 seconds (JVM running for 5.555)
+23:43:55.153 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - After saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+23:44:29.497 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 12488 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+23:44:29.498 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+23:44:29.499 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+23:44:33.906 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.651 seconds (JVM running for 5.514)
+23:44:34.208 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - After saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+23:50:14.676 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 6636 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+23:50:14.678 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+23:50:14.678 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+23:50:19.060 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.625 seconds (JVM running for 5.466)
+23:50:19.289 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - After saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+23:50:57.192 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 26388 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+23:50:57.194 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+23:50:57.194 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+23:51:01.558 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.603 seconds (JVM running for 5.461)
+23:51:01.824 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - After saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+23:53:28.511 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 5616 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+23:53:28.513 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+23:53:28.513 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+23:53:32.936 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.664 seconds (JVM running for 5.52)
+23:53:33.238 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Referential integrity constraint violation: "FKBC8RDKO9O9N1RI9BPDYXV3X7I: PUBLIC.EMPLOYEE FOREIGN KEY(POSITION_ID) REFERENCES PUBLIC.POSITION(POSITION_ID) (CAST(1 AS BIGINT))"; SQL statement:
+insert into employee (department_id, name, position_id, salary, id) values (?, ?, ?, ?, ?) [23506-212]
+23:55:14.710 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 18364 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+23:55:14.712 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+23:55:14.712 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+23:55:19.262 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.809 seconds (JVM running for 5.649)
+23:55:19.575 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - After saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+23:56:06.016 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 2052 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+23:56:06.018 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+23:56:06.018 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+23:56:10.620 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.842 seconds (JVM running for 5.688)
+23:56:10.846 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - After saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+23:59:41.064 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 19884 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+23:59:41.068 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+23:59:41.069 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+23:59:47.396 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 6.739 seconds (JVM running for 8.456)
+00:01:00.908 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 25248 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+00:01:00.913 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+00:01:00.914 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+00:01:07.334 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 6.806 seconds (JVM running for 8.599)
+00:01:37.873 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 16512 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+00:01:37.875 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+00:01:37.875 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+00:01:42.328 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.701 seconds (JVM running for 5.517)
+00:01:42.620 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - After saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+00:04:48.028 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 24640 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+00:04:48.030 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+00:04:48.030 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+00:04:52.486 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.698 seconds (JVM running for 5.617)
+00:04:52.776 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - After saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+00:08:29.915 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 7180 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+00:08:29.917 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+00:08:29.917 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+00:08:34.510 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.844 seconds (JVM running for 5.698)
+00:08:34.756 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - After saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+00:13:20.142 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 624 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+00:13:20.143 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+00:13:20.144 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+00:13:24.546 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.631 seconds (JVM running for 5.484)
+00:13:24.920 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - After saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+00:14:04.475 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 9512 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+00:14:04.476 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+00:14:04.477 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+00:14:08.907 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.673 seconds (JVM running for 5.521)
+00:14:09.171 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - After saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+00:16:14.653 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 21112 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+00:16:14.654 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+00:16:14.655 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+00:16:19.709 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 5.33 seconds (JVM running for 6.277)
+00:16:20.019 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - After saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+00:26:40.053 [http-nio-8080-exec-1] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Was invoked method to getAllEmployees
+00:26:40.274 [http-nio-8080-exec-1] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Employees are :[EmployeeDTO{id=1, name='Vasya', salary=100000, positionId=1}]
+00:26:40.294 [http-nio-8080-exec-1] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Data returned from employeeService.getAllEmployees(): [EmployeeDTO{id=1, name='Vasya', salary=100000, positionId=1}]
+00:26:40.294 [http-nio-8080-exec-1] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Was invoked method to getAllEmployees
+00:26:40.297 [http-nio-8080-exec-1] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Employees are :[EmployeeDTO{id=1, name='Vasya', salary=100000, positionId=1}]
+00:30:27.034 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 5528 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+00:30:27.035 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+00:30:27.037 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+00:30:31.861 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 5.058 seconds (JVM running for 5.901)
+00:30:32.068 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - After saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+00:30:32.164 [main] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Data returned from employeeService.getAllEmployees(): []
+00:35:47.789 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 16748 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+00:35:47.790 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+00:35:47.790 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+00:35:52.490 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.938 seconds (JVM running for 5.798)
+00:35:52.728 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - After saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+00:35:52.833 [main] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Data returned from employeeService.getAllEmployees(): []
+00:37:08.393 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 20060 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+00:37:08.394 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+00:37:08.395 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+00:37:13.055 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.895 seconds (JVM running for 5.726)
+00:37:13.437 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - After saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+00:37:13.542 [main] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Was invoked method to getAllEmployees
+00:37:13.543 [main] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Employees are :[EmployeeDTO{id=1, name='John', salary=5000, positionId=null}, EmployeeDTO{id=2, name='Alice', salary=7000, positionId=null}, EmployeeDTO{id=3, name='Bob', salary=6000, positionId=null}]
+00:37:13.553 [main] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Data returned from employeeService.getAllEmployees(): [EmployeeDTO{id=1, name='John', salary=5000, positionId=null}, EmployeeDTO{id=2, name='Alice', salary=7000, positionId=null}, EmployeeDTO{id=3, name='Bob', salary=6000, positionId=null}]
+00:37:13.554 [main] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Was invoked method to getAllEmployees
+00:37:13.554 [main] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Employees are :[EmployeeDTO{id=1, name='John', salary=5000, positionId=null}, EmployeeDTO{id=2, name='Alice', salary=7000, positionId=null}, EmployeeDTO{id=3, name='Bob', salary=6000, positionId=null}]
+00:37:45.048 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 16160 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+00:37:45.049 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+00:37:45.050 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+00:37:49.491 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.684 seconds (JVM running for 5.523)
+00:37:49.784 [main] INFO  r.s.l.s.w.s.EmployeeServiceImpl - After saving employees: [Employee{name='John', salary=5000, id=1, positionId=null, departmentId=null, position=null}, Employee{name='Alice', salary=7000, id=2, positionId=null, departmentId=null, position=null}, Employee{name='Bob', salary=6000, id=3, positionId=null, departmentId=null, position=null}]
+00:37:49.883 [main] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Was invoked method to getAllEmployees
+00:37:49.885 [main] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Employees are :[EmployeeDTO{id=1, name='John', salary=5000, positionId=null}, EmployeeDTO{id=2, name='Alice', salary=7000, positionId=null}, EmployeeDTO{id=3, name='Bob', salary=6000, positionId=null}]
+00:37:49.896 [main] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Data returned from employeeService.getAllEmployees(): [EmployeeDTO{id=1, name='John', salary=5000, positionId=null}, EmployeeDTO{id=2, name='Alice', salary=7000, positionId=null}, EmployeeDTO{id=3, name='Bob', salary=6000, positionId=null}]
+00:37:49.896 [main] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Was invoked method to getAllEmployees
+00:37:49.897 [main] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Employees are :[EmployeeDTO{id=1, name='John', salary=5000, positionId=null}, EmployeeDTO{id=2, name='Alice', salary=7000, positionId=null}, EmployeeDTO{id=3, name='Bob', salary=6000, positionId=null}]
+00:38:11.179 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 11844 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+00:38:11.181 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+00:38:11.181 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+00:38:15.619 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.677 seconds (JVM running for 5.503)
+00:39:48.363 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 10768 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+00:39:48.365 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+00:39:48.365 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+00:39:52.871 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.758 seconds (JVM running for 5.603)
+00:39:53.187 [main] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Was invoked method for create employee: EmployeeDTO{id=0, name='John', salary=5000, positionId=null}
+00:39:53.256 [main] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Employee is :Employee{name='John', salary=5000, id=0, positionId=null, departmentId=null, position=null}
+00:41:42.231 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 17288 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+00:41:42.233 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+00:41:42.233 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+00:41:46.609 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.614 seconds (JVM running for 5.438)
+00:42:37.841 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 20208 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+00:42:37.843 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+00:42:37.843 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+00:42:42.298 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.712 seconds (JVM running for 5.534)
+00:48:19.754 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 3560 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+00:48:19.756 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+00:48:19.756 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+00:48:24.295 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.78 seconds (JVM running for 5.607)
+00:51:15.994 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Starting EmployeeControllerIntegrationTest using Java 11.0.17 on MSI with PID 13864 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+00:51:15.996 [main] DEBUG r.s.l.s.w.s.EmployeeControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+00:51:15.996 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+00:51:20.525 [main] INFO  r.s.l.s.w.s.EmployeeControllerIntegrationTest - Started EmployeeControllerIntegrationTest in 4.775 seconds (JVM running for 5.615)
+00:51:20.802 [main] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Was invoked method for create employee: EmployeeDTO{id=0, name='John', salary=5000, positionId=null}
+00:51:20.895 [main] DEBUG r.s.l.s.w.s.EmployeeServiceImpl - Employee is :Employee{name='John', salary=5000, id=0, positionId=null, departmentId=null, position=null}

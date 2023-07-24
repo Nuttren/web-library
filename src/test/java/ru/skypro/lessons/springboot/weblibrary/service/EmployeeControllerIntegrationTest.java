@@ -5,17 +5,15 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockMultipartFile;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import org.springframework.transaction.annotation.Transactional;
 import ru.skypro.lessons.springboot.weblibrary.config.TestSecurityConfig;
 import ru.skypro.lessons.springboot.weblibrary.dto.EmployeeDTO;
 import ru.skypro.lessons.springboot.weblibrary.pojo.Employee;
@@ -25,6 +23,7 @@ import ru.skypro.lessons.springboot.weblibrary.repository.EmployeeRepository;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasSize;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -33,30 +32,32 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 @Import(TestSecurityConfig.class) // Импорт тестовой конфигурации
-@AutoConfigureTestDatabase
-@Transactional
+@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
 public class EmployeeControllerIntegrationTest {
 
     private static final Logger logger = LoggerFactory.getLogger(EmployeeServiceImpl.class);
     @Autowired
     private MockMvc mockMvc;
 
-    @MockBean
+    @Autowired
     private EmployeeServiceImpl employeeService;
 
     @Autowired
     private EmployeeRepository employeeRepository;
     @Test
+    @DirtiesContext
     public void testGetAllEmployees() throws Exception {
         // Создание тестовых данных
         Employee employee1 = new Employee();
         employee1.setId(1L);
         employee1.setName("John");
         employee1.setSalary(5000);
+
         Employee employee2 = new Employee();
         employee2.setId(2L);
         employee2.setName("Alice");
         employee2.setSalary(7000);
+
         Employee employee3 = new Employee();
         employee3.setId(3L);
         employee3.setName("Bob");
@@ -66,6 +67,7 @@ public class EmployeeControllerIntegrationTest {
         // Сохраняем тестовые данные в базу данных H2
         employeeRepository.saveAll(List.of(employee1, employee2, employee3));
         logger.info("After saving employees: {}", employeeRepository.findAll());
+
 
         // Выполняем GET запрос на адрес "/public/list"
         mockMvc.perform(get("/public/list"))
@@ -86,25 +88,24 @@ public class EmployeeControllerIntegrationTest {
         employeeDTO.setName("John");
         employeeDTO.setSalary(5000);
 
-        // Настройка мок-сервиса для успешного создания сотрудника
-        doNothing().when(employeeService).createEmployee(any(EmployeeDTO.class));
-
         // Выполнение POST-запроса и проверка результата
         mockMvc.perform(MockMvcRequestBuilders.post("/admin/create")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(asJsonString(employeeDTO)))
                 .andExpect(MockMvcResultMatchers.status().isOk());
 
-        // Проверка, что метод createEmployee был вызван с правильным аргументом
-        verify(employeeService, times(1)).createEmployee(eq(employeeDTO));
+        // Проверка, что данные были сохранены в базу данных H2
+        List<Employee> savedEmployees = (List<Employee>) employeeRepository.findAll();
+        assertThat(savedEmployees).hasSize(1);
+        assertThat(savedEmployees.get(0).getName()).isEqualTo("John");
+        assertThat(savedEmployees.get(0).getSalary()).isEqualTo(5000);
     }
 
 
     // Вспомогательный метод для преобразования объекта в JSON строку
-    private static String asJsonString(Object obj) {
+    private String asJsonString(Object obj) {
         try {
-            ObjectMapper objectMapper = new ObjectMapper();
-            return objectMapper.writeValueAsString(obj);
+            return new ObjectMapper().writeValueAsString(obj);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
