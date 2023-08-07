@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import ru.skypro.lessons.springboot.weblibrary.exeption.IncorrectEmployeeIdException;
 import ru.skypro.lessons.springboot.weblibrary.service.ReportService;
 
 @RestController
@@ -24,11 +25,15 @@ public class ReportController {
 
     @GetMapping("/api/public/{id}")
     public ResponseEntity<String> getReportById(@PathVariable Long id) {
+        try {
         String reportContent = reportService.getReportContentById(id);
         if (reportContent == null) {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok(reportContent);
-        }
+    } catch (IncorrectEmployeeIdException e) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
     }
+    }
+}
 

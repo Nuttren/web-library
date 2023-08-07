@@ -4,6 +4,8 @@ package ru.skypro.lessons.springboot.weblibrary.controller;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +19,7 @@ import ru.skypro.lessons.springboot.weblibrary.exeption.IncorrectEmployeeIdExcep
 import ru.skypro.lessons.springboot.weblibrary.pojo.EmployeeFullInfo;
 import ru.skypro.lessons.springboot.weblibrary.pojo.Position;
 import ru.skypro.lessons.springboot.weblibrary.service.EmployeeService;
+import ru.skypro.lessons.springboot.weblibrary.service.EmployeeServiceImpl;
 
 import java.io.IOException;
 import java.util.List;
@@ -29,8 +32,11 @@ public class EmployeeController {
 
     private final EmployeeService employeeService;
 
+    private static final Logger logger = LoggerFactory.getLogger(EmployeeServiceImpl.class);
+
     @GetMapping("public/list")
     public List<EmployeeDTO> getAllEmployees() {
+        logger.debug("Data returned from employeeService.getAllEmployees(): {}", employeeService.getAllEmployees());
         return employeeService.getAllEmployees();
     }
 
@@ -118,7 +124,8 @@ public class EmployeeController {
         try {
             // Читаем содержимое файла и преобразуем его в список объектов EmployeeDTO
             ObjectMapper objectMapper = new ObjectMapper();
-            List<EmployeeDTO> employees = objectMapper.readValue(file.getInputStream(), new TypeReference<>() {});
+            List<EmployeeDTO> employees = objectMapper.readValue(file.getInputStream(), new TypeReference<>() {
+            });
 
             // Сохраняем сотрудников в базе данных
             employeeService.saveAllEmployees(employees);
@@ -128,6 +135,7 @@ public class EmployeeController {
             return ResponseEntity.badRequest().body("Failed to upload employees: " + e.getMessage());
         }
     }
+
 }
 
 
