@@ -1,0 +1,10 @@
+version: '3'
+services:
+  testDB:
+    image: postgres:latest
+    ports:
+      - 6543:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1
+      POSTGRES_DB: homework
