@@ -23,6 +23,9 @@ import ru.skypro.lessons.springboot.weblibrary.pojo.Student;
 import ru.skypro.lessons.springboot.weblibrary.repository.AvatarRepository;
 import ru.skypro.lessons.springboot.weblibrary.repository.StudentRepository;
 
+import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -45,6 +48,7 @@ public class AvatarControllerIntegrationTest {
     @Autowired
     private AvatarRepository avatarRepository;
 
+
     @Container
     private static final PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:13")
             .withUsername("postgres")
@@ -55,6 +59,16 @@ public class AvatarControllerIntegrationTest {
         registry.add("spring.datasource.url", postgres::getJdbcUrl);
         registry.add("spring.datasource.username", postgres::getUsername);
         registry.add("spring.datasource.password", postgres::getPassword);
+    }
+
+    @Autowired
+    private DataSource dataSource;
+
+    @Test
+    void testPostgresql() throws SQLException {
+        try (Connection conn = dataSource.getConnection()) {
+            assertThat(conn).isNotNull();
+        }
     }
     @Test
     public void testUploadAvatar() throws Exception {

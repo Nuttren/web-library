@@ -13995,6 +13995,10 @@ Caused by: java.net.ConnectException: Connection refused: connect
 11:18:11.750 [main] DEBUG r.s.l.s.w.s.AvatarControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
 11:18:11.751 [main] INFO  r.s.l.s.w.s.AvatarControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
 11:18:16.629 [main] INFO  r.s.l.s.w.s.AvatarControllerIntegrationTest - Started AvatarControllerIntegrationTest in 5.127 seconds (JVM running for 6.048)
+14:15:34.323 [main] INFO  r.s.l.s.w.s.AvatarControllerIntegrationTest - Starting AvatarControllerIntegrationTest using Java 11.0.17 on MSI with PID 8608 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
+14:15:34.326 [main] DEBUG r.s.l.s.w.s.AvatarControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
+14:15:34.326 [main] INFO  r.s.l.s.w.s.AvatarControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+14:15:39.176 [main] INFO  r.s.l.s.w.s.AvatarControllerIntegrationTest - Started AvatarControllerIntegrationTest in 5.101 seconds (JVM running for 5.978)
 14:01:42.045 [main] INFO  r.s.l.s.w.s.AvatarControllerIntegrationTest - Starting AvatarControllerIntegrationTest using Java 11.0.17 on MSI with PID 13820 (started by nutre in C:\Users\nutre\IdeaProjects\maven-project\web-library)
 14:01:42.047 [main] DEBUG r.s.l.s.w.s.AvatarControllerIntegrationTest - Running with Spring Boot v2.7.0, Spring v5.3.20
 14:01:42.048 [main] INFO  r.s.l.s.w.s.AvatarControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
