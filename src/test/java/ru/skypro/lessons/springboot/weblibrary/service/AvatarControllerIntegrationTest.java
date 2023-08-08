@@ -31,8 +31,6 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
-
 @SpringBootTest
 @AutoConfigureMockMvc
 @Import(TestSecurityConfig.class) // Импорт тестовой конфигурации
@@ -47,7 +45,6 @@ public class AvatarControllerIntegrationTest {
 
     @Autowired
     private AvatarRepository avatarRepository;
-
 
     @Container
     private static final PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:13")
